@@ -77,6 +77,7 @@ public class UIManager : MonoBehaviour
     }
     public void Almeria()
     {
+
         _cadiz.SetActive(false);
         _huelva.SetActive(false);
         _sevilla.SetActive(false);
@@ -85,6 +86,7 @@ public class UIManager : MonoBehaviour
         _granada.SetActive(false);
         _jaen.SetActive(false);
         _malaga.SetActive(false);
+      
     }
     public void Cordoba()
     {
@@ -107,6 +109,7 @@ public class UIManager : MonoBehaviour
         _granada.SetActive(true);
         _jaen.SetActive(false);
         _malaga.SetActive(false);
+        GameManager.instance.Start_Granada();
     }
     public void Jaen()
     {
