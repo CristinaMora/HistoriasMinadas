@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
@@ -16,7 +17,13 @@ public class GameManager : MonoBehaviour
     bool fadingOut = false;
     float duracionFadeOut = 3.0f;
     float duracionFadeIn = 5.0f;
-     float max_volume=0.5f;
+     public float max_volume=0.25f;
+
+    public GameObject[] imagenes=new GameObject[2];  // Lista de imágenes que componen la secuencia
+    private int indiceActual = 0;
+    int a = 0;
+    private enum states {menu, almeria,granada,malaga,jaen};
+    states curr=states.menu;
     private void Awake()
     {
         // Verifica si ya existe una instancia del GameManager.
@@ -24,13 +31,14 @@ public class GameManager : MonoBehaviour
         {
             // Si no existe, establece esta instancia como la instancia única.
             instance = this;
-            DontDestroyOnLoad(gameObject);
+           DontDestroyOnLoad(gameObject);
         }
         else
         {
             // Si ya existe una instancia, destruye esta para evitar duplicados.
             Destroy(gameObject);
         }
+      
     }
 
     public void Start_Granada()
@@ -42,9 +50,20 @@ public class GameManager : MonoBehaviour
         //sonidos[(int)current_music].Stop();
         save = music.rio_ancho;
         Debug.Log("workin");
+       // MostrarImagenActual();
+        curr = states.granada;
         //sonidos[(int)current_music].Play();
-       
 
+        //GameObject[] objetosEncontrados = GameObject.FindGameObjectsWithTag("1");
+        //// Haz algo con los objetos encontrados (puedes iterar sobre el arreglo)
+        //int i = 0;
+        //foreach (GameObject objeto in objetosEncontrados)
+        //{
+        //    imagenes[i] = objeto;
+        //}
+        //Debug.Log(imagenes[0]);
+        //Debug.Log(imagenes[1]);
+        //MostrarImagenActual();
     }
     IEnumerator FadeOut()
     {
@@ -67,9 +86,7 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator FadeIn()
     {
-        Debug.Log((int)save);
-        Debug.Log((int)current_music);
-        Debug.Log(sonidos.Length);
+ 
         sonidos[(int)current_music].Play();
         float startVolume = 0;
         sonidos[(int)current_music].volume = startVolume;
@@ -87,19 +104,50 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      
         for (int i = 0; i < n_music; i++)
         {
             sonidos[i].Stop();
             sonidos[i].volume = 0;
         }
+       
         current_music = music.Dos_aguas;
         StartCoroutine(FadeIn());
-        Debug.Log("cuanto");
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space)&& curr==states.granada)  // Detecta un clic del botón izquierdo del mouse
+        {
+            //Debug.Log("netro");
+            //++a;
+            //imagenes[indiceActual].SetActive(false);
+            //imagenes[indiceActual].GetComponent<Image>().enabled = false;
+            //AvanzarImagen();
+        }
+    }
+    void AvanzarImagen()
+    {
+        indiceActual++;
+        if (indiceActual <2)
+        {
+            MostrarImagenActual();
+        }
+        else
+        {
+            // La secuencia de imágenes ha llegado al final
+            Debug.Log("Secuencia de imágenes completada.");
+        }
+    }
+    void MostrarImagenActual()
+    {
+        if (indiceActual < 2)
+        {
+       
+            imagenes[indiceActual].SetActive(true);
+            imagenes[indiceActual].GetComponent<Image>().enabled = true;
+        }
     }
 }
