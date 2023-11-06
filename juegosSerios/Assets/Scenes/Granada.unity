@@ -488,8 +488,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 96.37036, y: -66.08255}
-  m_SizeDelta: {x: 392.7407, y: 182.1651}
+  m_AnchoredPosition: {x: 247.12256, y: 207}
+  m_SizeDelta: {x: 1032.9856, y: 182.1651}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1350188571
 MonoBehaviour:
@@ -511,17 +511,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: sdgfdfbdbd
+  m_text: "Mecina - Apujaara de Granada (1940)\n\nLa parva\n\nEn las idilicas tierras
+    de la Alpujarra granadina, una antigua tradicion culinaria nos transporta al
+    pasado de los peque\xF1os pueblos. La obtencion de harina de trigo solia ser
+    un evento comunitario. En esta, se creaban haces de paja, se llevaban a la era
+    circular y se trillaban con una mula y un trillo. Luego, el grano se aventaba
+    al viento para separarlo de la paja. Ahora, tendras la oportunidad de experimentar
+    esta tradicion como Natividad."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4280847548
+  m_fontColor: {r: 0.735849, g: 0.547866, b: 0.15619439, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -538,14 +544,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -574,7 +580,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -507.0396, y: 0, z: -36.524048, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
