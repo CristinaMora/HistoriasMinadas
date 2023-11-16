@@ -98,6 +98,8 @@ public class UIManager : MonoBehaviour
         _granada.SetActive(false);
         _jaen.SetActive(false);
         _malaga.SetActive(false);
+        GameManager.instance.Start_Scene("Cordoba");
+
     }
     public void Granada()
     {
@@ -109,7 +111,8 @@ public class UIManager : MonoBehaviour
         _granada.SetActive(true);
         _jaen.SetActive(false);
         _malaga.SetActive(false);
-        GameManager.instance.Start_Granada();
+        GameManager.instance.Start_Scene("Granada");
+
     }
     public void Jaen()
     {

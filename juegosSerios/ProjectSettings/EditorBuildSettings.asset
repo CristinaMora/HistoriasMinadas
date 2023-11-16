@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Granada.unity
     guid: 34d5cb24c04a1ad41bd11579f571d1c7
+  - enabled: 1
+    path: Assets/Scenes/Cordoba.unity
+    guid: d23b25754ff28c84981ed63c28ec744f
   m_configObjects: {}

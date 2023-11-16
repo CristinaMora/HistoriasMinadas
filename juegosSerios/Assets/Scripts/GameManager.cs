@@ -41,17 +41,21 @@ public class GameManager : MonoBehaviour
       
     }
 
-    public void Start_Granada()
+    public void Start_Scene(string name)
     {
 
 
-        SceneManager.LoadScene("Granada");
-        StartCoroutine(FadeOut());
-        //sonidos[(int)current_music].Stop();
-        save = music.rio_ancho;
-        Debug.Log("workin");
-       // MostrarImagenActual();
-        curr = states.granada;
+        SceneManager.LoadScene(name);
+        if(name == "Granada")
+        {
+            StartCoroutine(FadeOut());
+            //sonidos[(int)current_music].Stop();
+            save = music.rio_ancho;
+            Debug.Log("workin");
+            // MostrarImagenActual();
+            curr = states.granada;
+        }
+        
         //sonidos[(int)current_music].Play();
 
         //GameObject[] objetosEncontrados = GameObject.FindGameObjectsWithTag("1");
