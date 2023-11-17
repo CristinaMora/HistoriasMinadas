@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     float duracionFadeOut = 3.0f;
     float duracionFadeIn = 5.0f;
      public float max_volume=0.25f;
+    public Text texto; //texto 
 
     public GameObject[] imagenes=new GameObject[2];  // Lista de imágenes que componen la secuencia
     private int indiceActual = 0;
@@ -153,5 +154,11 @@ public class GameManager : MonoBehaviour
             imagenes[indiceActual].SetActive(true);
             imagenes[indiceActual].GetComponent<Image>().enabled = true;
         }
+    }
+    void Ocultartexto()
+    {
+        // Accede al objeto Text
+        texto = GameObject.Find("Intro").GetComponent<Text>();
+        texto.enabled = false;
     }
 }
