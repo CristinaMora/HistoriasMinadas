@@ -776,7 +776,6 @@ GameObject:
   - component: {fileID: 1820100765}
   - component: {fileID: 1820100764}
   - component: {fileID: 1820100763}
-  - component: {fileID: 1820100767}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -868,27 +867,3 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1820100767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820100762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0a35cc516d532d43b69df3163981c06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _fondo: {fileID: 0}
-  _titulo: {fileID: 0}
-  _play: {fileID: 0}
-  _exit: {fileID: 0}
-  _cadiz: {fileID: 0}
-  _huelva: {fileID: 0}
-  _sevilla: {fileID: 0}
-  _almeria: {fileID: 0}
-  _cordoba: {fileID: 0}
-  _granada: {fileID: 0}
-  _jaen: {fileID: 0}
-  _malaga: {fileID: 0}

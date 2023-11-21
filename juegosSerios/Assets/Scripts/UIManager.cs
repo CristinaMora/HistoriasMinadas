@@ -62,6 +62,7 @@ public class UIManager : MonoBehaviour
         _granada.SetActive(false);
         _jaen.SetActive(false);
         _malaga.SetActive(false);
+        GameManager.instance.Start_Scene("Cadiz");
     }
 
     public void Sevilla()
