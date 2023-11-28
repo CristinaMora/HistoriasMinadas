@@ -14,7 +14,6 @@ public class CordobaUI : MonoBehaviour
     [SerializeField] private GameObject _bocadillo;
     [SerializeField] private TMP_Text _texto;
     [SerializeField] private Button _inicio;
-    int numdialog;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,14 +24,8 @@ public class CordobaUI : MonoBehaviour
         _fotopatios.SetActive(false);
         _inicio.gameObject.SetActive(true);
         _texto.gameObject.SetActive(false);
-        numdialog = 0;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-               
-    }
     public void patios()
     {
         _imagenini.SetActive(false);
@@ -46,7 +39,6 @@ public class CordobaUI : MonoBehaviour
     }
     public void nextdialog()
     {
-        numdialog++;
         _texto.text = CordobaScenenManager.instance.nextText(numdialog);
 
     }

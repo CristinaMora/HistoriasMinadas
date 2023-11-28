@@ -9,8 +9,6 @@ public class CordobaScenenManager : MonoBehaviour
     #region references
     [SerializeField]
     private CordobaUI uiManager;
-    [SerializeField]
-    LevelData _levelData;
     #endregion
     private void Awake()
     {
@@ -28,21 +26,6 @@ public class CordobaScenenManager : MonoBehaviour
         }
 
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public string nextText(int num)
-    {
-        Debug.Log(num);
-        if (_levelData.texto.Length > num)
-            return _levelData.texto[num];
-        else return "fallo";
-    }
+    
+   
 }
