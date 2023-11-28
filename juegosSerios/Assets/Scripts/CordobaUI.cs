@@ -35,11 +35,11 @@ public class CordobaUI : MonoBehaviour
         _fotopatios.SetActive(true);
         _inicio.gameObject.SetActive(false);
         _texto.gameObject.SetActive(true);
-        _texto.text = CordobaScenenManager.instance.nextText(numdialog); 
+        _texto.text = Dialog.instance.nextText(); 
     }
     public void nextdialog()
     {
-        _texto.text = CordobaScenenManager.instance.nextText(numdialog);
+        _texto.text = Dialog.instance.nextText();
 
     }
 }

@@ -9,6 +9,7 @@ public class CordobaScenenManager : MonoBehaviour
     #region references
     [SerializeField]
     private CordobaUI uiManager;
+    int numMonedas;
     #endregion
     private void Awake()
     {
@@ -26,6 +27,9 @@ public class CordobaScenenManager : MonoBehaviour
         }
 
     }
-    
-   
+    private void Start()
+    {
+        numMonedas = 0;
+    }
+
 }

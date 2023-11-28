@@ -4,16 +4,32 @@ using UnityEngine;
 
 public class Dialog : MonoBehaviour
 {
+    public static Dialog instance;
 
     [SerializeField]
     LevelData _levelData;
 
     int numdialog; //numero del dialogo por el que vas
+    private void Awake()
+    {
+        // Verifica si ya existe una instancia del GameManager.
+        if (instance == null)
+        {
+            // Si no existe, establece esta instancia como la instancia única.
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            // Si ya existe una instancia, destruye esta para evitar duplicados.
+            Destroy(gameObject);
+        }
 
+    }
     // Start is called before the first frame update
     void Start()
     {
-        numdialog = 0;
+        numdialog = -1;
     }
 
     public string specificText(int num)
@@ -33,4 +49,5 @@ public class Dialog : MonoBehaviour
     {
         numdialog = num;
     }
+    public int getnum() { return numdialog; }
 }
