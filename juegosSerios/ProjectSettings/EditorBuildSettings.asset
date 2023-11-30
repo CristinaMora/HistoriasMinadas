@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cordoba.unity
     guid: d23b25754ff28c84981ed63c28ec744f
+  - enabled: 1
+    path: Assets/Scenes/Cadiz.unity
+    guid: 6a300ddb18aaa2b41b4350fc48a55a10
   m_configObjects: {}
