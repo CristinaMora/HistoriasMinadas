@@ -1,43 +1,45 @@
-//using System.Collections;
-//using System.Collections.Generic;
-//using TMPro;
-//using UnityEngine;
-//using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.UI;
 
-//public class CadizUI : MonoBehaviour
-//{
-  
-//    [SerializeField] private Image border;
-//    [SerializeField] private GameObject cadiz;
-//    [SerializeField] private GameObject almadraba;
-//    [SerializeField] private GameObject button;
-//    [SerializeField] private Image _fondo;
+public class CadizUI : MonoBehaviour
+{
 
-
-
-//    // Start is called before the first frame update
-//    void Start()
-//    {
-//        cadiz.setActive(true);
-//        button.SetActive(true);
-//        almadraba.SetActive(true);
-//       // border.GetComponent<Image>().enable = true;
-        
-//    }
+    [SerializeField] private GameObject border;
+    [SerializeField] private GameObject cadiz;
+    [SerializeField] private GameObject almadraba;
+    [SerializeField] private GameObject button;
+    [SerializeField] private GameObject explicacion;
    
 
-//    // Update is called once per frame
-//    void Update()
-//    {
-        
-//    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        cadiz.SetActive(true);
+        button.SetActive(true);
+        almadraba.SetActive(true);
+        explicacion.SetActive(true);
+        border.SetActive(true);
 
-//    public void Play()
-//    {
-//        cadiz.setActive(false);
-//        button.SetActive(false);
-//        almadraba.SetActive(false);
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    public void PlayButton()
+    {
+        cadiz.SetActive(false);
+        button.SetActive(false);
+        almadraba.SetActive(false);
+        border.SetActive(false);
+        explicacion?.SetActive(false);
        
-//        //border.GetComponent<Image>().enable = false;
-//    }
-//}
+    }
+}
