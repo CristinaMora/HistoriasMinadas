@@ -6,6 +6,9 @@ public class Dialog : MonoBehaviour
 {
     public static Dialog instance;
 
+    [SerializeField] GameObject textodialogo;
+    [SerializeField] GameObject cuadrodialogo;
+    [SerializeField] GameObject botondialogo;
     [SerializeField]
     LevelData _levelData;
 
@@ -41,6 +44,11 @@ public class Dialog : MonoBehaviour
     public string nextText()
     {
         numdialog++;
+        if(numdialog == 5)
+        {
+            desactivaCuadroDialogo();
+            CordobaScenenManager.instance.addMoneda();
+        }
         if (_levelData.texto.Length > numdialog)
             return _levelData.texto[numdialog];
         else return "fallo";
@@ -50,4 +58,16 @@ public class Dialog : MonoBehaviour
         numdialog = num;
     }
     public int getnum() { return numdialog; }
+    public void activaCuadroDialogo()
+    {
+        textodialogo.SetActive(true);
+        cuadrodialogo.SetActive(true);
+        botondialogo.SetActive(true);
+    }
+    public void desactivaCuadroDialogo()
+    {
+        textodialogo.SetActive(false);
+        cuadrodialogo.SetActive(false);
+        botondialogo.SetActive(false);
+    }
 }

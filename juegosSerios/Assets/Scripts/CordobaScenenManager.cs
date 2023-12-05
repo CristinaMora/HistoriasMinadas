@@ -31,5 +31,10 @@ public class CordobaScenenManager : MonoBehaviour
     {
         numMonedas = 0;
     }
+    public void addMoneda()
+    {
+        numMonedas++;
+        uiManager.actualizaMonedas(numMonedas);
+    }
 
 }

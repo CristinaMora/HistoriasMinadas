@@ -148,6 +148,12 @@ public class UIManager : MonoBehaviour
         _jaen.SetActive(false);
         _malaga.SetActive(false);
     }
+    public void InfoTurismo()
+    {
+        string nombreBoton = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
+        GameManager.instance.DondeTurismo = nombreBoton;
+        GameManager.instance.Start_Scene("Informacion");
+    }
     public void ExitGame()
     {
         Application.Quit();

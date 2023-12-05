@@ -12,6 +12,8 @@ public class CordobaUI : MonoBehaviour
     [SerializeField] private GameObject _fotopatios;
     [SerializeField] private GameObject _isabel;
     [SerializeField] private GameObject _bocadillo;
+    [SerializeField] private GameObject _buttoncambiodialog;
+    [SerializeField] private TMP_Text _nummonedas;
     [SerializeField] private TMP_Text _texto;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,8 @@ public class CordobaUI : MonoBehaviour
         _bocadillo.SetActive(false);
         _fotopatios.SetActive(false);
         _texto.gameObject.SetActive(false);
+        _nummonedas.gameObject.SetActive(false);
+        _buttoncambiodialog.SetActive(false);
     }
 
     public void patios()
@@ -35,6 +39,11 @@ public class CordobaUI : MonoBehaviour
     public void nextdialog()
     {
         _texto.text = Dialog.instance.nextText();
+
+    }
+    public void actualizaMonedas(int num)
+    {
+        _nummonedas.text = num.ToString();
 
     }
 }

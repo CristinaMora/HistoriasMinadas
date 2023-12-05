@@ -22,9 +22,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] imagenes=new GameObject[2];  // Lista de imágenes que componen la secuencia
     private int indiceActual = 0;
-    int a = 0;
     private enum states {menu, almeria,granada,malaga,jaen};
     states curr=states.menu;
+    public string DondeTurismo;
     private void Awake()
     {
         // Verifica si ya existe una instancia del GameManager.
