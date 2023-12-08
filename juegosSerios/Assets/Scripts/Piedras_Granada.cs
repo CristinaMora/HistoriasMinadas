@@ -22,6 +22,7 @@ public class Piedras_Granada : MonoBehaviour
     {
         if (other.GetComponent<PlayerMovement_Granada>())
         {
+           // Generador_Piedras.instance().Collision();
             Debug.Log("Collision");
         }
         else

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-   [SerializeField]
+    [SerializeField]
     private Transform objetivo; // El personaje que la cámara seguirá
 
     [SerializeField]
@@ -16,6 +16,8 @@ public class CameraMovement : MonoBehaviour
     [SerializeField]
     private Vector2 rangoMovimientoY = new Vector2(-2f, 2f); // Rango de movimiento en el eje Y
 
+    private EfectoCamaraShake efectoShake;
+
     void Start()
     {
         if (objetivo != null)
@@ -24,6 +26,9 @@ public class CameraMovement : MonoBehaviour
             Vector3 posicionInicial = new Vector3(objetivo.position.x, rangoMovimientoY.x, transform.position.z);
             transform.position = posicionInicial;
         }
+
+        // Obtener la referencia al script de efecto de shake
+        efectoShake = GetComponent<EfectoCamaraShake>();
     }
 
     void LateUpdate()
@@ -44,5 +49,11 @@ public class CameraMovement : MonoBehaviour
             // Establecer la nueva posición de la cámara
             transform.position = nuevaPosicion;
         }
+    }
+
+    // Método para activar el efecto de shake desde otros scripts
+    public void ActivarShake()
+    {
+        efectoShake.ActivarShake();
     }
 }

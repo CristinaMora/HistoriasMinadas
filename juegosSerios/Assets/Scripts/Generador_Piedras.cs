@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Generador_Piedras : MonoBehaviour
 {
+    public static Generador_Piedras instance;
+
     [SerializeField]
     private GameObject piedraPrefab; // Prefab de la piedra que se generará
 
@@ -15,7 +17,22 @@ public class Generador_Piedras : MonoBehaviour
 
     [SerializeField]
     private float posicionY = 5f; // Posición fija en el eje Y donde se generan las piedras
+    private void Awake()
+    {
+        // Verifica si ya existe una instancia del GameManager.
+        if (instance == null)
+        {
+            // Si no existe, establece esta instancia como la instancia única.
+            instance = this;
+           // DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            // Si ya existe una instancia, destruye esta para evitar duplicados.
+            Destroy(gameObject);
+        }
 
+    }
     private void Start()
     {
         // Iniciar la generación de piedras en intervalos regulares
@@ -28,4 +45,12 @@ public class Generador_Piedras : MonoBehaviour
         Vector3 posicionGenerada = new Vector3(Random.Range(-rangoX, rangoX), posicionY, 0f);
         Instantiate(piedraPrefab, posicionGenerada, Quaternion.identity);
     }
+    public void Collision()
+    {
+
+    }
+    //public void FinalMinijuego()
+    //{
+
+    //}
 }

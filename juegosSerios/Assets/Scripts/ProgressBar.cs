@@ -26,6 +26,7 @@ public class ProgressBar : MonoBehaviour
         {
             // Aquí puedes realizar alguna acción cuando la barra de progreso alcanza el 100%
             Debug.Log("Barra de progreso completada");
+            //Generador_Piedras.instance().FinalMinijuego();
         }
     }
 
@@ -34,7 +35,7 @@ public class ProgressBar : MonoBehaviour
         // Asegurarse de que la referencia a la imagen de la barra esté configurada
         if (barraImagen != null)
         {
-            Debug.Log(porcentaje);  
+            //Debug.Log(porcentaje);  
             // Ajustar el valor de llenado de la barra de progreso
             barraImagen.fillAmount = porcentaje;
         }
