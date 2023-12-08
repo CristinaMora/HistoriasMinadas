@@ -11,13 +11,27 @@ public class ChangeScene : MonoBehaviour
     // Start is called before the first frame update
   
     public void Clicky()
-    {
-        for (int i=0; i<Desactivar.Length; i++){
-            Desactivar[i].SetActive(false);
-        }
-        for (int i = 0; i < Activar.Length; i++)
+    { // Desactivar los GameObjects especificados en el array Desactivar
+        foreach (GameObject desactivarObjeto in Desactivar)
         {
-            Activar[i].SetActive(true);
+            desactivarObjeto.SetActive(false);
+
+            // Activar cada hijo del GameObject actual
+            foreach (Transform hijoTransform in desactivarObjeto.transform)
+            {
+                hijoTransform.gameObject.SetActive(false);
+            }
+        }
+
+        // Activar los GameObjects especificados en el array Activar
+        foreach (GameObject activarObjeto in Activar)
+        {
+            activarObjeto.SetActive(true);
+            // Desactivar cada hijo del GameObject actual
+            foreach (Transform hijoTransform in activarObjeto.transform)
+            {
+                hijoTransform.gameObject.SetActive(true);
+            }
         }
     }
 }
