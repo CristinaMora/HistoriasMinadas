@@ -12,4 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e186e580cd766d479c4c0ab5ad040ff, type: 3}
   m_Name: Granada
   m_EditorClassIdentifier: 
-  texto: []
+  texto:
+  - Hola Nati
+  - "Espero que estes lista para la parva, va ser un d\xEDa duro"
+  - "Cuando estes lista para trillas pulsa sobre la paja de detr\xE1s"
+  - el caballo
+  - "Yo si fuera t\xFA perimero dar\xEDa una vuelta"
+  - Puedes preguntar a a la gente haciendo click
+  - sobre ellos
+  - "!Seguro te cuentan algo interesante\xA1"
+  - Me encanta la parva.
+  - 'Consiste el como se pbtiene el grano de '
+  - la paja para luego poder hacer harina
+  - "!Es todo un proceso\xA1"
+  - 'Primero, como ves se pone '
+  - en un ruedo circular
+  - Para luego trillarla con el cabalo
+  - Una vez trillada
+  - "Se puede o lanzar en la direcci\xF3n "
+  - opuesta al viento
+  - "y as\xED el grano cae y la paja se va volando"
+  - "f\xEDsica supongo"
+  - "O tambi\xE9n si eres m\xE1s moderno hay una m\xE1quina que lo hace"
+  - "Las vistas desde aqu\xED con inceibles adem\xE1s"
+  - No puedo mas

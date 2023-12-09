@@ -381,8 +381,8 @@ Transform:
   m_GameObject: {fileID: 633072851}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.53, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: -4.07, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -639,9 +639,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   piedraPrefab: {fileID: 5431058107748829962, guid: ad3eded2b10d8bb4292dd24486308948, type: 3}
-  intervaloDeGeneracion: 7
-  rangoX: 40
+  intervaloDeGeneracion: 2
+  rangoX: 5
   posicionY: 5
+  _EfectoCamaraShake: {fileID: 633072856}
 --- !u!4 &1375513303
 Transform:
   m_ObjectHideFlags: 0
@@ -664,9 +665,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 141694278054678662, guid: 0a72b91870fc99143899ea91a1fb93d2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2570547571098076165, guid: 0a72b91870fc99143899ea91a1fb93d2, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570547571098076165, guid: 0a72b91870fc99143899ea91a1fb93d2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.9850242
       objectReference: {fileID: 0}
     - target: {fileID: 2570547571098076165, guid: 0a72b91870fc99143899ea91a1fb93d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -674,7 +683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2570547571098076165, guid: 0a72b91870fc99143899ea91a1fb93d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.01
+      value: 4.4904
       objectReference: {fileID: 0}
     - target: {fileID: 2570547571098076165, guid: 0a72b91870fc99143899ea91a1fb93d2, type: 3}
       propertyPath: m_LocalPosition.z

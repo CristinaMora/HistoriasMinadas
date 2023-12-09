@@ -5,7 +5,7 @@ public class EfectoCamaraShake : MonoBehaviour
     private Vector3 posicionOriginal; // Posición original de la cámara
     private bool shaking = false; // Indicador de si la cámara está temblando
     private float duracionShake = 0.5f; // Duración del efecto de shake en segundos
-    private float intensidadShake = 0.1f; // Intensidad del shake
+    private float intensidadShake = 0.4f; // Intensidad del shake
 
     void Start()
     {

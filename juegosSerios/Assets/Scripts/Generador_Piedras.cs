@@ -17,6 +17,10 @@ public class Generador_Piedras : MonoBehaviour
 
     [SerializeField]
     private float posicionY = 5f; // Posición fija en el eje Y donde se generan las piedras
+
+    [SerializeField]
+    EfectoCamaraShake _EfectoCamaraShake;
+
     private void Awake()
     {
         // Verifica si ya existe una instancia del GameManager.
@@ -47,7 +51,7 @@ public class Generador_Piedras : MonoBehaviour
     }
     public void Collision()
     {
-
+        _EfectoCamaraShake.ActivarShake();
     }
     //public void FinalMinijuego()
     //{

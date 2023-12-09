@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Dialog : MonoBehaviour
 {
@@ -11,6 +14,8 @@ public class Dialog : MonoBehaviour
     [SerializeField] GameObject botondialogo;
     [SerializeField]
     LevelData _levelData;
+
+    TMP_Text _text = null;
 
     int numdialog; //numero del dialogo por el que vas
     private void Awake()
@@ -32,6 +37,12 @@ public class Dialog : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (textodialogo != null)
+        {
+            _text = textodialogo.GetComponent<TMP_Text>();
+            _text.text = _levelData.texto[0];
+        }
+            
         numdialog = -1;
     }
 
@@ -44,13 +55,17 @@ public class Dialog : MonoBehaviour
     public string nextText()
     {
         numdialog++;
-        if(numdialog == 5)
-        {
-            desactivaCuadroDialogo();
-            CordobaScenenManager.instance.addMoneda();
-        }
+     
+        //if(numdialog == 5)
+        //{
+        //    desactivaCuadroDialogo();
+        //    CordobaScenenManager.instance.addMoneda();
+        //}
         if (_levelData.texto.Length > numdialog)
+        {
             return _levelData.texto[numdialog];
+        }
+           
         else return "fallo";
     }
     public void  changenumdialog(int num)
@@ -58,6 +73,7 @@ public class Dialog : MonoBehaviour
         numdialog = num;
     }
     public int getnum() { return numdialog; }
+    public void setnum(int a) {  numdialog = a; }
     public void activaCuadroDialogo()
     {
         textodialogo.SetActive(true);
