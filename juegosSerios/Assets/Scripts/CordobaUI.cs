@@ -38,7 +38,20 @@ public class CordobaUI : MonoBehaviour
     }
     public void nextdialog()
     {
-        _texto.text = Dialog.instance.nextText();
+        Debug.Log(Dialog.instance.numdialog);
+        if(Dialog.instance.numdialog != 4)
+        {
+            _texto.text = Dialog.instance.nextText();
+            
+        }
+        else
+        {
+            if (Dialog.instance.numdialog == 4)
+            {
+                CordobaScenenManager.instance.addMoneda();
+            }
+            Dialog.instance.desactivaCuadroDialogo();
+        }
 
     }
     public void actualizaMonedas(int num)

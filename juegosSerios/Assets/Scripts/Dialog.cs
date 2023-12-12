@@ -17,7 +17,7 @@ public class Dialog : MonoBehaviour
 
     TMP_Text _text = null;
 
-    int numdialog; //numero del dialogo por el que vas
+   public int numdialog; //numero del dialogo por el que vas
     private void Awake()
     {
         // Verifica si ya existe una instancia del GameManager.
@@ -68,10 +68,7 @@ public class Dialog : MonoBehaviour
            
         else return "fallo";
     }
-    public void  changenumdialog(int num)
-    {
-        numdialog = num;
-    }
+    
     public int getnum() { return numdialog; }
     public void setnum(int a) {  numdialog = a; }
     public void activaCuadroDialogo()
