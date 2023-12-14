@@ -12,6 +12,7 @@ public class ChangeScene : MonoBehaviour
   
     public void Clicky()
     { // Desactivar los GameObjects especificados en el array Desactivar
+      
         foreach (GameObject desactivarObjeto in Desactivar)
         {
             desactivarObjeto.SetActive(false);

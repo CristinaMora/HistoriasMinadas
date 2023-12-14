@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Cordoba
   m_EditorClassIdentifier: 
   texto:
+  - Hola chicos, vamos a comenzar
   - Me llamo isabel y voy a ser vuestra guia
   - "Para hacerlo m\xE1s din\xE1mico "
   - os propongo un juego, teneis que encontrar
@@ -21,6 +22,12 @@ MonoBehaviour:
   - Tengo que tener cuidado con las plantas
   - Creo haber visto algo en las plantas
   - La tengo
+  - "El primer concurso de los patios de celebr\xF3 en 1921 "
+  - Se trata de una competicion entre los vecinos de la ciudad
+  - Que consiste en decorar tu patio de la forma mas bonita posible
+  - Fue declarado patrimonio Cultural por la UNESCO en 2012
+  - Los patios suelen caractereizarse por tener grandes arcos, columas y azulejos
+  - Pero sobre todo por las flores que llenan de color las paredes
   - 
   - 
   - 

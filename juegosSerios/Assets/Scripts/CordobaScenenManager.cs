@@ -30,11 +30,33 @@ public class CordobaScenenManager : MonoBehaviour
     private void Start()
     {
         numMonedas = 0;
+
     }
     public void addMoneda()
     {
         numMonedas++;
         uiManager.actualizaMonedas(numMonedas);
     }
+    public void maceta()
+    {
 
+        //el texto 5
+        Dialog.instance.activaCuadroDialogo();
+        Dialog.instance.specificText(5);
+    }
+    public void maceta2()
+    {
+        //el texto el 6
+
+    }
+    public void macetaconmoneda()
+    {
+        //el 7 
+
+    }
+    public void cambioescenaPatios2()
+    {
+        //el texto 8
+
+    }
 }

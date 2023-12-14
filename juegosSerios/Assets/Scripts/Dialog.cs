@@ -56,11 +56,6 @@ public class Dialog : MonoBehaviour
     {
         numdialog++;
      
-        //if(numdialog == 5)
-        //{
-        //    desactivaCuadroDialogo();
-        //    CordobaScenenManager.instance.addMoneda();
-        //}
         if (_levelData.texto.Length > numdialog)
         {
             return _levelData.texto[numdialog];
