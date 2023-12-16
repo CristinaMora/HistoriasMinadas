@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class CordobaScenenManager : MonoBehaviour
 {
+    bool[] monedas = { true, true, true, true, true, true, true, true, true, true, };
     public static CordobaScenenManager instance;
     #region references
     [SerializeField]
