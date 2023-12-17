@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     float duracionFadeIn = 5.0f;
      public float max_volume=0.25f;
     public Text texto; //texto 
-
+    [SerializeField] private GameObject g;
     public GameObject[] imagenes=new GameObject[2];  // Lista de imágenes que componen la secuencia
     private int indiceActual = 0;
     private enum states {menu, almeria,granada,malaga,jaen};
@@ -161,8 +161,10 @@ public class GameManager : MonoBehaviour
         texto = GameObject.Find("Intro").GetComponent<Text>();
         texto.enabled = false;
     }
-    public void start_minijuegueGranade()
+    public void GranadeVisible()
     {
+        g.SetActive(true);
 
     }
+
 }

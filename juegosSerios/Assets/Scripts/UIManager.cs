@@ -150,6 +150,7 @@ public class UIManager : MonoBehaviour
     }
     public void InfoTurismo()
     {
+        Debug.Log("entra");
         string nombreBoton = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
         GameManager.instance.DondeTurismo = nombreBoton;
         Debug.Log("Info turismo");

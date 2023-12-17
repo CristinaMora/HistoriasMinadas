@@ -37,10 +37,14 @@ MonoBehaviour:
   - "Las vistas desde aqu\xED con inceibles adem\xE1s"
   - "\xBFQu\xE9 tal Nati?"
   - Me encanta estar en la Alpujarra
-  - "La arquitectura local es \xFAnica, con casas en terrazas que se adaptan al terreno
-    monta\xF1oso. Los tejados planos y las chimeneas a\xF1aden car\xE1cter."
-  - Los senderos para caminar ofrecen vistas espectaculares de Sierra Nevada. La
-    naturaleza y la tranquilidad son irresistibles.
-  - "Es un destino perfecto para el turismo rural, donde el tiempo parece ralentizarse,
-    permiti\xE9ndome disfrutar de la autenticidad de la Alpujarra Granadina."
-  - No puedo mas
+  - "La arquitectura local es \xFAnica,"
+  - ' con casas en terrazas que se adaptan al terreno'
+  - " monta\xF1oso. Los tejados planos y las chimeneas "
+  - "a\xF1aden car\xE1cter"
+  - Es un destino perfecto para el turismo rural
+  - 'donde el tiempo parece ralentizarse, '
+  - "permiti\xE9ndome disfrutar de la autenticidad"
+  - ' de la Alpujarra Granadina.'
+  - Los senderos para caminar ofrecen vistas
+  - ' espectaculares de Sierra Nevada. '
+  - La naturaleza y la tranquilidad son irresistibles.

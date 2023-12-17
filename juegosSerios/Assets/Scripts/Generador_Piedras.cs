@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Generador_Piedras : MonoBehaviour
@@ -19,7 +18,14 @@ public class Generador_Piedras : MonoBehaviour
     private float posicionY = 5f; // Posición fija en el eje Y donde se generan las piedras
 
     [SerializeField]
-    EfectoCamaraShake _EfectoCamaraShake;
+    private AudioClip sonidoCaballo; // Sonido del caballo
+    [SerializeField]
+    private AudioClip sonidoPaja; // Sonido de la paja
+
+    private AudioSource audioSource;
+    private AudioSource audioSource2;
+    [SerializeField]
+    private EfectoCamaraShake _EfectoCamaraShake;
 
     [SerializeField]
     private GameObject[] ocultar;
@@ -33,7 +39,7 @@ public class Generador_Piedras : MonoBehaviour
         {
             // Si no existe, establece esta instancia como la instancia única.
             instance = this;
-           // DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -41,11 +47,28 @@ public class Generador_Piedras : MonoBehaviour
             Destroy(gameObject);
         }
 
+        // Obtén o agrega un componente AudioSource
+        audioSource = GetComponent<AudioSource>();
+        audioSource2 = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
+
     private void Start()
     {
         // Iniciar la generación de piedras en intervalos regulares
         InvokeRepeating("GenerarPiedra", 0f, intervaloDeGeneracion);
+
+        // Reproducir el sonido del caballo en bucle
+        audioSource.clip = sonidoCaballo;
+        audioSource.loop = true;
+        audioSource.Play();
+
+        audioSource2.clip = sonidoPaja;
+        audioSource2.loop = true;
+        audioSource2.Play();
     }
 
     private void GenerarPiedra()
@@ -53,44 +76,51 @@ public class Generador_Piedras : MonoBehaviour
         // Generar una piedra en una posición aleatoria a lo largo del eje X
         Vector3 posicionGenerada = new Vector3(Random.Range(-rangoX, rangoX), posicionY, 0f);
         Instantiate(piedraPrefab, posicionGenerada, Quaternion.identity);
+
+        // Reproducir el sonido de la paja
+        audioSource.PlayOneShot(sonidoPaja);
     }
+
     public void Collision()
     {
         _EfectoCamaraShake.ActivarShake();
     }
+    public void Volver()
+    {
+        GameManager.instance.Start_Scene("SampleScene");
+        GameManager.instance.GranadeVisible();
+    }
     public void FinalMinijuego()
     {
-       // ocultar.SetActive(false);
+        // Detener la generación de piedras
         CancelInvoke("GenerarPiedra");
-       // Debug.Log("sellama");
+
+        // Detener el sonido del caballo
+        audioSource.Stop();
+        audioSource2.Stop();
         foreach (GameObject desactivarObjeto in ocultar)
         {
-           // desactivarObjeto.SetActive(true);
+            // Desactivar objetos y gestionar el fundido si es necesario
             if (desactivarObjeto.GetComponent<ControladorFundido>() != null)
             {
-               // Debug.Log("fadeout");
-            //    desactivarObjeto.gameObject.SetActive(true);
                 desactivarObjeto.GetComponent<ControladorFundido>().ComenzarDesvanecer();
             }
             else
             {
-                //Debug.Log("fat");
                 desactivarObjeto.SetActive(false);
             }
         }
+
         foreach (GameObject desactivarObjeto in aparecer)
         {
-            desactivarObjeto.SetActive(true);
+            // Activar objetos y gestionar el fundido si es necesario
             if (desactivarObjeto.GetComponent<ControladorFundido>() != null)
             {
-                //Debug.Log("fadeout");
-                desactivarObjeto.gameObject.SetActive(true);
                 desactivarObjeto.GetComponent<ControladorFundido>().ComenzarFundido();
             }
             else
             {
-                //Debug.Log("fat");
-                desactivarObjeto.SetActive(true);   
+                desactivarObjeto.SetActive(true);
             }
         }
     }

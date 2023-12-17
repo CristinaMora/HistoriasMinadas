@@ -38,11 +38,13 @@ public class Granda_UI : MonoBehaviour
     }
     public void setNati()
     {
-        resart = 8; currentmax = 21; _Dialog.setnum(8);
+        resart = 8; currentmax = 21; _Dialog.setnum(7);
+        netText();
     }
-    public void setAbuela()
+    public void setAbuela() 
     {
-        resart = 21; currentmax = 26; _Dialog.setnum(21);
+        resart = 23; currentmax = 34; _Dialog.setnum(23);
+        netText();
     }
     public void ActivarDialogo()
     {
@@ -53,5 +55,6 @@ public class Granda_UI : MonoBehaviour
     {
         GameManager.instance.Start_Scene("Granada_Minijuego");
     }
+ 
 
 }

@@ -220,7 +220,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 576479545}
         m_TargetAssemblyTypeName: Granda_UI, Assembly-CSharp
-        m_MethodName: setNati
+        m_MethodName: setAbuela
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1917,7 +1917,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &795451494
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2488,7 +2488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1190296427
 RectTransform:
   m_ObjectHideFlags: 0
