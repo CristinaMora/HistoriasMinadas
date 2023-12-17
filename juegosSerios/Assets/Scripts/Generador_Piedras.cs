@@ -21,6 +21,11 @@ public class Generador_Piedras : MonoBehaviour
     [SerializeField]
     EfectoCamaraShake _EfectoCamaraShake;
 
+    [SerializeField]
+    private GameObject[] ocultar;
+    [SerializeField]
+    private GameObject[] aparecer;
+
     private void Awake()
     {
         // Verifica si ya existe una instancia del GameManager.
@@ -53,8 +58,40 @@ public class Generador_Piedras : MonoBehaviour
     {
         _EfectoCamaraShake.ActivarShake();
     }
-    //public void FinalMinijuego()
-    //{
-
-    //}
+    public void FinalMinijuego()
+    {
+       // ocultar.SetActive(false);
+        CancelInvoke("GenerarPiedra");
+       // Debug.Log("sellama");
+        foreach (GameObject desactivarObjeto in ocultar)
+        {
+           // desactivarObjeto.SetActive(true);
+            if (desactivarObjeto.GetComponent<ControladorFundido>() != null)
+            {
+               // Debug.Log("fadeout");
+            //    desactivarObjeto.gameObject.SetActive(true);
+                desactivarObjeto.GetComponent<ControladorFundido>().ComenzarDesvanecer();
+            }
+            else
+            {
+                //Debug.Log("fat");
+                desactivarObjeto.SetActive(false);
+            }
+        }
+        foreach (GameObject desactivarObjeto in aparecer)
+        {
+            desactivarObjeto.SetActive(true);
+            if (desactivarObjeto.GetComponent<ControladorFundido>() != null)
+            {
+                //Debug.Log("fadeout");
+                desactivarObjeto.gameObject.SetActive(true);
+                desactivarObjeto.GetComponent<ControladorFundido>().ComenzarFundido();
+            }
+            else
+            {
+                //Debug.Log("fat");
+                desactivarObjeto.SetActive(true);   
+            }
+        }
+    }
 }

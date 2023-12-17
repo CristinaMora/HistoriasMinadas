@@ -10,12 +10,13 @@ public class Piedras_Granada : MonoBehaviour
     private void Update()
     {
         // Mover las piedras hacia abajo en el eje Y
-      //  transform.Translate(Vector3.down * velocidad * Time.deltaTime);
-
+        //  transform.Translate(Vector3.down * velocidad * Time.deltaTime);
+      //  Debug.Log("fun");
         // Comprobar colisión con el personaje utilizando duck typing
-        if (transform.position.x < -50)
+        if (transform.position.y < -50)
         {
-            Destroy(this);
+            Debug.Log("yeee");
+            Destroy(this.gameObject);
         }
     }
     private void OnTriggerEnter2D(Collider2D other)

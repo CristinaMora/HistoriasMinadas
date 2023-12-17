@@ -161,4 +161,8 @@ public class GameManager : MonoBehaviour
         texto = GameObject.Find("Intro").GetComponent<Text>();
         texto.enabled = false;
     }
+    public void start_minijuegueGranade()
+    {
+
+    }
 }

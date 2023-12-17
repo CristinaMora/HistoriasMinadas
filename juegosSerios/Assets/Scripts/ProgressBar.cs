@@ -25,8 +25,9 @@ public class ProgressBar : MonoBehaviour
         else
         {
             // Aquí puedes realizar alguna acción cuando la barra de progreso alcanza el 100%
-            Debug.Log("Barra de progreso completada");
+            // Debug.Log("Barra de progreso completada");
             //Generador_Piedras.instance().FinalMinijuego();
+            Generador_Piedras.instance.FinalMinijuego();
         }
     }
 

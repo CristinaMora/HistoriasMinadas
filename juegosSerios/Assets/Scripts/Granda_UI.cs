@@ -20,8 +20,10 @@ public class Granda_UI : MonoBehaviour
     
     public void netText()
     {
+      
         _text.text = _Dialog.nextText();
         int a = _Dialog.getnum();
+        Debug.Log(a);
         //Debug.Log(a);
         //if (paso_dialogos[a])
         //{
@@ -29,6 +31,7 @@ public class Granda_UI : MonoBehaviour
         //}
         if (currentmax == a)
         {
+            _Dialog.setnum(resart);
             _Dialog.desactivaCuadroDialogo();
         }
        
@@ -39,13 +42,16 @@ public class Granda_UI : MonoBehaviour
     }
     public void setAbuela()
     {
-        resart = 21; currentmax = 22; _Dialog.setnum(21);
+        resart = 21; currentmax = 26; _Dialog.setnum(21);
     }
     public void ActivarDialogo()
     {
         _Dialog.activaCuadroDialogo();
         _text.text = _Dialog.nextText();
     }
-    
-    
+    public void start_minijuegueGranade()
+    {
+        GameManager.instance.Start_Scene("Granada_Minijuego");
+    }
+
 }

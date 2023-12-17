@@ -15,9 +15,9 @@ MonoBehaviour:
   texto:
   - Hola Nati
   - "Espero que estes lista para la parva, va ser un d\xEDa duro"
-  - "Cuando estes lista para trillas pulsa sobre la paja de detr\xE1s"
-  - el caballo
-  - "Yo si fuera t\xFA perimero dar\xEDa una vuelta"
+  - "Cuando estes lista, pulsa sobre la paja de detr\xE1s"
+  - para comenzaar a trillar la paja.
+  - "Yo, si fuera t\xFA, primero dar\xEDa una vuelta."
   - Puedes preguntar a a la gente haciendo click
   - sobre ellos
   - "!Seguro te cuentan algo interesante\xA1"
@@ -35,4 +35,12 @@ MonoBehaviour:
   - "f\xEDsica supongo"
   - "O tambi\xE9n si eres m\xE1s moderno hay una m\xE1quina que lo hace"
   - "Las vistas desde aqu\xED con inceibles adem\xE1s"
+  - "\xBFQu\xE9 tal Nati?"
+  - Me encanta estar en la Alpujarra
+  - "La arquitectura local es \xFAnica, con casas en terrazas que se adaptan al terreno
+    monta\xF1oso. Los tejados planos y las chimeneas a\xF1aden car\xE1cter."
+  - Los senderos para caminar ofrecen vistas espectaculares de Sierra Nevada. La
+    naturaleza y la tranquilidad son irresistibles.
+  - "Es un destino perfecto para el turismo rural, donde el tiempo parece ralentizarse,
+    permiti\xE9ndome disfrutar de la autenticidad de la Alpujarra Granadina."
   - No puedo mas
