@@ -37,10 +37,10 @@ public class ControladorFundido : MonoBehaviour
             }
 
             // Si la transparencia es casi completa, activa el siguiente botón
-            if (Mathf.Abs(alpha - 1.0f) < 0.05f)
-            {
-                MostrarSiguienteBoton();
-            }
+            //if (Mathf.Abs(alpha - 1.0f) < 0.05f)
+            //{
+            //    MostrarSiguienteBoton();
+            //}
         }
     }
 

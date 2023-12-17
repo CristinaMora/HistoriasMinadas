@@ -12,12 +12,23 @@ public class Granda_UI : MonoBehaviour
     [SerializeField] bool[] paso_dialogos;
     int currentmax = 7;
     int resart = 0;
+    [SerializeField]
+    private AudioClip him;
+    [SerializeField]
+    private AudioSource audioSource3;
     // Start is called before the first frame update
     void Start()
     {
         _text.text = _Dialog.nextText();
+        audioSource3 = GetComponent<AudioSource>();
+        if (audioSource3 == null)
+        {
+            audioSource3 = gameObject.AddComponent<AudioSource>();
+        }
+        audioSource3.clip = him;
+        audioSource3.loop = false;
     }
-    
+
     public void netText()
     {
       
@@ -38,11 +49,13 @@ public class Granda_UI : MonoBehaviour
     }
     public void setNati()
     {
+        audioSource3.Play();
         resart = 8; currentmax = 21; _Dialog.setnum(7);
         netText();
     }
-    public void setAbuela() 
+    public void setAbuela()
     {
+        audioSource3.Play();
         resart = 23; currentmax = 34; _Dialog.setnum(23);
         netText();
     }

@@ -32,6 +32,7 @@ public class Generador_Piedras : MonoBehaviour
     [SerializeField]
     private GameObject[] aparecer;
 
+
     private void Awake()
     {
         // Verifica si ya existe una instancia del GameManager.
