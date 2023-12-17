@@ -13,6 +13,10 @@ public class CordobaScenenManager : MonoBehaviour
     [SerializeField]
     private CordobaUI uiManager;
     [SerializeField] public GameObject regadera;
+    [SerializeField] public GameObject imagen;
+    [SerializeField] public GameObject container;
+    [SerializeField] public GameObject parent;
+    [SerializeField] public GameObject moneda;
     int numMonedas;
     #endregion
     private void Awake()
@@ -123,7 +127,24 @@ public class CordobaScenenManager : MonoBehaviour
         Dialog.instance.activaCuadroDialogo();
         CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(36));
         Dialog.instance.setnum(36);
-        addMoneda();
+        if (monedas[5])
+        {
+            addMoneda();
+            monedas[5] = false;
+
+        }
+
+    }
+    public void jardines4monedapalacio() { 
+        if (monedas[7])
+        {
+            addMoneda();
+            monedas[7] = false;
+            imagen.SetActive(false);
+            container.SetActive(false);
+            parent.SetActive(false);
+            moneda.SetActive(false);
+        }
 
     }
 
@@ -203,6 +224,7 @@ public class CordobaScenenManager : MonoBehaviour
     }
     public void cambioescenaPalacio()
     {
+
         if (monedas[7])
         {
             Dialog.instance.activaCuadroDialogo();
@@ -210,7 +232,11 @@ public class CordobaScenenManager : MonoBehaviour
             Dialog.instance.setnum(41);
         }
         else
-            Dialog.instance.desactivaCuadroDialogo();
+        Dialog.instance.desactivaCuadroDialogo();
+        imagen.SetActive(false);
+        container.SetActive(false);
+        parent.SetActive(false);
+        moneda.SetActive(false);
 
     }
     public void cambioescenaMedina()
@@ -229,10 +255,7 @@ public class CordobaScenenManager : MonoBehaviour
     { //falta poner si alguna de las monedas no ha sido recogida que no entre 
         bool todas= true;
         int i = 0;
-        //for(i = 0; i < monedas.Length; i++)
-        //{
-
-        //}
+       
         if (monedas[9])
         {
             Dialog.instance.activaCuadroDialogo();

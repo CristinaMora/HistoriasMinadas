@@ -90,6 +90,14 @@ public class CordobaUI : MonoBehaviour
                 CordobaScenenManager.instance.regadera.SetActive(true);
 
             }
+            else if (Dialog.instance.numdialog == 46)//escena alfomra
+            {
+                CordobaScenenManager.instance.container.SetActive(true);
+                CordobaScenenManager.instance.imagen.SetActive(true);
+                CordobaScenenManager.instance.parent.SetActive(true);
+                CordobaScenenManager.instance.moneda.SetActive(true);
+
+            }
             else if (Dialog.instance.numdialog == 55)
             {
                 if (CordobaScenenManager.instance.monedas[8])

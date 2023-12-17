@@ -15,8 +15,16 @@ public class DragPlace : MonoBehaviour, IDropHandler
             items = Draghandler.itemDragging;
             items.transform.SetParent(transform);
             items.transform.position=transform.position;
-            CordobaScenenManager.instance.monedas[2] = false;
-            CordobaScenenManager.instance.addMoneda();
+            if (items.gameObject.name == "Alfombra")
+            {
+
+            }
+            else
+            {
+                CordobaScenenManager.instance.monedas[2] = false;
+                CordobaScenenManager.instance.addMoneda();
+            }
+            
         }
     }
 
