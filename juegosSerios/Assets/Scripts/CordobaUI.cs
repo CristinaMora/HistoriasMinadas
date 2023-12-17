@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class CordobaUI : MonoBehaviour
 {
+    public static CordobaUI instance;
     [SerializeField] private GameObject _escenaTitulo;
     [SerializeField] private GameObject _bocadillo;
     [SerializeField] private GameObject _escena1;
@@ -21,6 +22,22 @@ public class CordobaUI : MonoBehaviour
     [SerializeField] private GameObject _escena9;
     [SerializeField] private TMP_Text _nummonedas;
     [SerializeField] private TMP_Text _texto;
+    private void Awake()
+    {
+        // Verifica si ya existe una instancia 
+        if (instance == null)
+        {
+            // Si no existe, establece esta instancia como la instancia única.
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            // Si ya existe una instancia, destruye esta para evitar duplicados.
+            Destroy(gameObject);
+        }
+
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -42,16 +59,23 @@ public class CordobaUI : MonoBehaviour
     public void nextdialog()
     {
         Debug.Log(Dialog.instance.numdialog);
-        if(Dialog.instance.numdialog != 4)
+        // Debug.Log((Dialog.instance.numdialog != 4 && Dialog.instance.numdialog != 8));
+        int a = Dialog.instance.numdialog;
+        if (a!= 5 && a!= 8 && a != 6 && a != 7)
         {
             _texto.text = Dialog.instance.nextText();
             
         }
         else
         {
-            if (Dialog.instance.numdialog == 4)
+            if (Dialog.instance.numdialog == 5)
             {
-                CordobaScenenManager.instance.addMoneda();
+                if (CordobaScenenManager.instance.monedas[0])
+                {
+                    CordobaScenenManager.instance.addMoneda();
+                    CordobaScenenManager.instance.monedas[0] = false;
+                }
+               
             }
             Dialog.instance.desactivaCuadroDialogo();
         }

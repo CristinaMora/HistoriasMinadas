@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CordobaScenenManager : MonoBehaviour
 {
-    bool[] monedas = { true, true, true, true, true, true, true, true, true, true, };
+   public bool[] monedas = { true, true, true, true, true, true, true, true, true, true};
     public static CordobaScenenManager instance;
     #region references
     [SerializeField]
@@ -43,11 +43,28 @@ public class CordobaScenenManager : MonoBehaviour
 
         //el texto 5
         Dialog.instance.activaCuadroDialogo();
-        Dialog.instance.specificText(5);
+        CordobaUI.instance.actualizadialogo( Dialog.instance.specificText(8));
+        Dialog.instance.setnum(8);
+        if (monedas[1])
+        {
+            addMoneda();
+            monedas[1] = false;
+
+        }
+
     }
     public void maceta2()
     {
-        //el texto el 6
+        Dialog.instance.activaCuadroDialogo();
+        CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(6));
+        Dialog.instance.setnum(6);
+
+    }
+    public void maceta3()
+    {
+        Dialog.instance.activaCuadroDialogo();
+        CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(7));
+        Dialog.instance.setnum(7);
 
     }
     public void macetaconmoneda()
