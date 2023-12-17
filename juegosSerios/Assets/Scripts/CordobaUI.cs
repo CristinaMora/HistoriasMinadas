@@ -59,9 +59,8 @@ public class CordobaUI : MonoBehaviour
     public void nextdialog()
     {
         Debug.Log(Dialog.instance.numdialog);
-        // Debug.Log((Dialog.instance.numdialog != 4 && Dialog.instance.numdialog != 8));
         int a = Dialog.instance.numdialog;
-        if (a!= 5 && a!= 8 && a != 6 && a != 7 && a != 17 && a != 27 && a != 28)
+        if (a!= 5 && a!= 8 && a != 6 && a != 7 && a != 17 && a != 27 && a != 28 && a != 21 && a != 32 && a != 39 && a != 40 && a != 46 && a != 55)
         {
             _texto.text = Dialog.instance.nextText();
             
@@ -76,6 +75,29 @@ public class CordobaUI : MonoBehaviour
                     CordobaScenenManager.instance.monedas[0] = false;
                 }
                
+            }
+            else if (Dialog.instance.numdialog == 21)
+            {
+                if (CordobaScenenManager.instance.monedas[3])
+                {
+                    CordobaScenenManager.instance.addMoneda();
+                    CordobaScenenManager.instance.monedas[3] = false;
+                }
+
+            }
+            else if (Dialog.instance.numdialog == 39)
+            {
+                CordobaScenenManager.instance.regadera.SetActive(true);
+
+            }
+            else if (Dialog.instance.numdialog == 55)
+            {
+                if (CordobaScenenManager.instance.monedas[8])
+                {
+                    CordobaScenenManager.instance.addMoneda();
+                    CordobaScenenManager.instance.monedas[8] = false;
+                }
+
             }
             Dialog.instance.desactivaCuadroDialogo();
         }
