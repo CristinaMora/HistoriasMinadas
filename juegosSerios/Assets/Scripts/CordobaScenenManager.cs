@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class CordobaScenenManager : MonoBehaviour
 {
-   public bool[] monedas = { true, true, true, true, true, true, true, true, true, true};
+    //                         0      1        2       3       4        5        6      7      8      9
+    //                      isabel, patios1,patios2,juderia,mezquita,jardines,estatua,viana, medina, bar
+   public bool[] monedas = { true , true   , true  , true  , true   , true   , true  ,true , true  , true};
     public static CordobaScenenManager instance;
     #region references
     [SerializeField]
@@ -67,14 +69,48 @@ public class CordobaScenenManager : MonoBehaviour
         Dialog.instance.setnum(7);
 
     }
-    public void macetaconmoneda()
+    public void monedacelo()
     {
-        //el 7 
+        Dialog.instance.activaCuadroDialogo();
+        CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(28));
+        Dialog.instance.setnum(28);
+        if (monedas[4])
+        {
+            addMoneda();
+            monedas[4] = false;
+
+        }
 
     }
+
     public void cambioescenaPatios2()
     {
-        //el texto 8
+        if (monedas[2])
+        {
+            Dialog.instance.activaCuadroDialogo();
+            CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(9));
+            Dialog.instance.setnum(9);
+        }
+
+    }
+    public void cambioescenaPatios()
+    {
+        if (monedas[0])
+        {
+            Dialog.instance.activaCuadroDialogo();
+            CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(0));
+            Dialog.instance.setnum(0);
+        }
+
+    }
+    public void cambioescenaMezquita()
+    {
+        if (monedas[4])
+        {
+            Dialog.instance.activaCuadroDialogo();
+            CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(22));
+            Dialog.instance.setnum(22);
+        }
 
     }
 }

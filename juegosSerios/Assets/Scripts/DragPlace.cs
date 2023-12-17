@@ -8,11 +8,15 @@ public class DragPlace : MonoBehaviour, IDropHandler
     public GameObject items;
     public void OnDrop(PointerEventData eventData)
     {
+        Debug.Log(items);
         if (!items)
         {
+            Debug.Log("entra");
             items = Draghandler.itemDragging;
             items.transform.SetParent(transform);
             items.transform.position=transform.position;
+            CordobaScenenManager.instance.monedas[2] = false;
+            CordobaScenenManager.instance.addMoneda();
         }
     }
 
@@ -21,6 +25,7 @@ public class DragPlace : MonoBehaviour, IDropHandler
     // Update is called once per frame
     void Update()
     {
+      
         if (items!=null && items.transform.parent != transform)
         {
             items=null;

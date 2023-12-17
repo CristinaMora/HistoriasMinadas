@@ -61,7 +61,7 @@ public class CordobaUI : MonoBehaviour
         Debug.Log(Dialog.instance.numdialog);
         // Debug.Log((Dialog.instance.numdialog != 4 && Dialog.instance.numdialog != 8));
         int a = Dialog.instance.numdialog;
-        if (a!= 5 && a!= 8 && a != 6 && a != 7)
+        if (a!= 5 && a!= 8 && a != 6 && a != 7 && a != 17 && a != 27 && a != 28)
         {
             _texto.text = Dialog.instance.nextText();
             
