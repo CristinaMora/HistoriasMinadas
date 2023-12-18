@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CordobaUI : MonoBehaviour
@@ -62,7 +63,7 @@ public class CordobaUI : MonoBehaviour
     {
         Debug.Log(Dialog.instance.numdialog);
         int a = Dialog.instance.numdialog;
-        if (a!= 5 && a!= 8 && a != 6 && a != 7 && a != 17 && a != 27 && a != 28 && a != 21 && a != 32 && a != 33 && a != 34 && a != 35 && a != 36 && a != 39 && a != 40 && a != 46 && a != 55 && a != 57 && a != 59 && a != 63 && a != 64 && a != 67 && a != 68)
+        if (a!= 5 && a!= 8 && a != 6 && a != 7 && a != 17 && a != 27 && a != 28 && a != 21 && a != 32 && a != 33 && a != 34 && a != 35 && a != 36 && a != 39 && a != 40 && a != 46 && a != 55 && a != 57 && a != 59 && a != 62 && a != 63 && a != 66 && a != 67 && a != 70 && a != 76 && a != 69)
         {
             _texto.text = Dialog.instance.nextText();
             
@@ -100,7 +101,7 @@ public class CordobaUI : MonoBehaviour
                 }
 
             }
-            else if (Dialog.instance.numdialog == 67)
+            else if (Dialog.instance.numdialog == 66)
             {
                 CordobaScenenManager.instance.jarron.SetActive(true);
 
@@ -112,17 +113,29 @@ public class CordobaUI : MonoBehaviour
 
 
             }
+            else if (Dialog.instance.numdialog == 70)
+            {
+                //activar muchos objetos
+                CordobaScenenManager.instance.gente.SetActive(true);
+
+            }
+            else if (Dialog.instance.numdialog == 76)
+            {
+                GameManager.instance.juegosjugados[0] = true;
+                SceneManager.LoadScene("SampleScene");
+                //carga la escana del menu
+            }
 
             Dialog.instance.desactivaCuadroDialogo();
             if (Dialog.instance.numdialog == 21)
             {
                 Dialog.instance.activaCuadroDialogo();
                 CordobaScenenManager.instance.desactivaopciones();
-                actualizadialogo(Dialog.instance.specificText(61));
-                Dialog.instance.setnum(61);
+                actualizadialogo(Dialog.instance.specificText(60));
+                Dialog.instance.setnum(60);
 
             }
-            else if (Dialog.instance.numdialog == 63)
+            else if (Dialog.instance.numdialog == 62)
             {
                 Dialog.instance.activaCuadroDialogo();
                 _texto.gameObject.SetActive(false);
@@ -158,7 +171,31 @@ public class CordobaUI : MonoBehaviour
     {
         if (_escena8.activeSelf)//escena del bar opcion2 andar
         {
-
+            CordobaScenenManager.instance.opcion1.SetActive(false);
+            CordobaScenenManager.instance.opcion2.SetActive(false);
+            _texto.gameObject.SetActive(true);
+            actualizadialogo(Dialog.instance.specificText(69));
+            Dialog.instance.setnum(69);
+        }
+        else
+        {
+            CordobaScenenManager.instance.opcion1.SetActive(false);
+            CordobaScenenManager.instance.opcion2.SetActive(false);
+            _texto.gameObject.SetActive(true);
+            actualizadialogo(Dialog.instance.specificText(63));
+            Dialog.instance.setnum(63);
+        }
+        
+    }
+    public void clickjarron()
+    {
+        if (_escena8.activeSelf)//escena del bar opcion1 correr
+        {
+            CordobaScenenManager.instance.opcion1.SetActive(false);
+            CordobaScenenManager.instance.opcion2.SetActive(false);
+            _texto.gameObject.SetActive(true);
+            actualizadialogo(Dialog.instance.specificText(70));
+            Dialog.instance.setnum(70);
         }
         else
         {
@@ -167,22 +204,6 @@ public class CordobaUI : MonoBehaviour
             _texto.gameObject.SetActive(true);
             actualizadialogo(Dialog.instance.specificText(64));
             Dialog.instance.setnum(64);
-        }
-        
-    }
-    public void clickjarron()
-    {
-        if (_escena8.activeSelf)//escena del bar opcion1 correr
-        {
-
-        }
-        else
-        {
-            CordobaScenenManager.instance.opcion1.SetActive(false);
-            CordobaScenenManager.instance.opcion2.SetActive(false);
-            _texto.gameObject.SetActive(true);
-            actualizadialogo(Dialog.instance.specificText(65));
-            Dialog.instance.setnum(65);
         }
        
     }

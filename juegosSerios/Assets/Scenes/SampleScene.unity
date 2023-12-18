@@ -1844,6 +1844,7 @@ MonoBehaviour:
   imagenes:
   - {fileID: 0}
   - {fileID: 0}
+  juegosjugados: 000000
   DondeTurismo: 
 --- !u!82 &1151770319
 AudioSource:
@@ -2625,7 +2626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1664807784
 RectTransform:
   m_ObjectHideFlags: 0
