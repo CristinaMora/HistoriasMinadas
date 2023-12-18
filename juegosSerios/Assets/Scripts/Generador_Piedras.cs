@@ -89,7 +89,7 @@ public class Generador_Piedras : MonoBehaviour
     public void Volver()
     {
         GameManager.instance.Start_Scene("SampleScene");
-        GameManager.instance.GranadeVisible();
+       // GameManager.instance.GranadeVisible();
     }
     public void FinalMinijuego()
     {
