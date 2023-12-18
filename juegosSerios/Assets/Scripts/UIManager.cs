@@ -38,6 +38,20 @@ public class UIManager : MonoBehaviour
 
     }
 
+    public void reinicio()
+    {
+        _titulo.SetActive(false);
+        _play.SetActive(false);
+        _exit.SetActive(false);
+        _cadiz.SetActive(true);
+        _huelva.SetActive(true);
+        _sevilla.SetActive(true);
+        _almeria.SetActive(true);
+        _cordoba.SetActive(true);
+        _granada.SetActive(true);
+        _jaen.SetActive(true);
+        _malaga.SetActive(true);
+    }
     public void PlayMenu()
     {
         _titulo.SetActive(false);

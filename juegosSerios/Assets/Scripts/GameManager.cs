@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     states curr=states.menu;
      //                    cordoba, cadiz, granada
     public bool[] juegosjugados ={ false, false,false};
+    public string[] names = { "GRANADA", "CORDOBA", "CADIZ" };
     public string DondeTurismo; //string para la escena de turismo
     private void Awake()
     {
@@ -69,6 +70,23 @@ public class GameManager : MonoBehaviour
         //Debug.Log(imagenes[0]);
         //Debug.Log(imagenes[1]);
         //MostrarImagenActual();
+    }
+    public void VuelveGranada()
+    {
+        GameObject canvas = GameObject.Find("UI");
+        Debug.Log(canvas);
+        uiManager = canvas.GetComponent<UIManager>();
+        uiManager.reinicio();
+        juegosjugados[0] = true;
+        for(int i = 0; i < 3; ++i)
+        {
+            if (juegosjugados[i])
+            {
+                GameObject granada = GameObject.Find(names[i]);
+                granada.SetActive(true);
+
+            }
+        }
     }
     IEnumerator FadeOut()
     {
