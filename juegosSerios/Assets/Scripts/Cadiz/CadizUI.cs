@@ -5,6 +5,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CadizUI : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class CadizUI : MonoBehaviour
     [SerializeField] private GameObject pescadoraimage;
     [SerializeField] private GameObject fondoimage;
     [SerializeField] private GameObject fondoimage2;
+    [SerializeField] private GameObject check;
     [SerializeField] private GameObject winmenu;
     private bool gameoverbool = false;
     private float timer = 0;
@@ -49,8 +51,6 @@ public class CadizUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
-       
 
         borderimage.SetActive(true);
         paquitatext.SetActive(true);
@@ -124,6 +124,7 @@ public class CadizUI : MonoBehaviour
         fondoimage.GetComponent<Fondo_Movement>().start();
         fondoimage2.SetActive(true);
         fondoimage2.GetComponent<Fondo_Movement>().start();
+        check.GetComponent<Fondo_Movement>().start();
 
 
     }
@@ -155,8 +156,7 @@ public class CadizUI : MonoBehaviour
     }
     public void GameOver()
     {
-        fishplayer.SetActive(false);
-        redgenerator.SetActive(false);
+        DesactivaJuego();
         gameover.SetActive(true);
         gameoverbool = true;
         fondoimage.SetActive(false);
@@ -166,29 +166,40 @@ public class CadizUI : MonoBehaviour
     {
         pescadoraimage.SetActive(true);
         redgenerator.SetActive(false);
-        fishplayer.SetActive(false);
        
+        DesactivaJuego();
         Dialog.instance.activaCuadroDialogo();
-        
-        fondoimage.GetComponent<Fondo_Movement>().stop();
-        fondoimage2.GetComponent<Fondo_Movement>().stop();
+       
         if (one == false)
         {
             Dialog.instance.setnum(15);
+            Dialog.instance.specificText(15);
+            one = true;
         }
         else
         {
             Dialog.instance.setnum(18);
+            Dialog.instance.specificText(18);
         }
 
 
     }
     public void Win()
     {
-        winmenu.SetActive(false);
+        DesactivaJuego();
+        winmenu.SetActive(true);
     }
     public void MenuButton()
     {
-
+        GameManager.instance.juegosjugados[1] = true;
+        SceneManager.LoadScene("SampleScene");
+    }
+    public void DesactivaJuego()
+    {
+        fishplayer.SetActive(false);
+        redgenerator.SetActive(false);
+        fondoimage.GetComponent<Fondo_Movement>().stop();
+        fondoimage2.GetComponent<Fondo_Movement>().stop();
+        check.GetComponent<Fondo_Movement>().stop();
     }
 }

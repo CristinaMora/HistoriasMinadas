@@ -19,7 +19,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject _granada;
     [SerializeField] private GameObject _jaen;
     [SerializeField] private GameObject _malaga;
+    [SerializeField] private GameObject insigniacordoba;
+    [SerializeField] private GameObject insigniacadiz;
+    [SerializeField] private GameObject insigniagranada;
     #endregion
+
+    public bool[] juegosjugados;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +39,10 @@ public class UIManager : MonoBehaviour
         _cordoba.SetActive(false); 
         _granada.SetActive(false); 
         _jaen.SetActive(false); 
-        _malaga.SetActive(false); 
+        _malaga.SetActive(false);
+        insigniacordoba.SetActive(false);
+        insigniacadiz.SetActive(false);
+        insigniagranada.SetActive(false);
 
     }
 
@@ -65,6 +73,23 @@ public class UIManager : MonoBehaviour
         _granada.SetActive(true);
         _jaen.SetActive(true);
         _malaga.SetActive(true);
+
+        juegosjugados = GameManager.instance.juegosjugados;
+        if (juegosjugados[0])
+        {
+            insigniacordoba.SetActive(true);
+           
+        }
+        if (juegosjugados[1])
+        {
+            insigniacadiz.SetActive(true);
+           
+        }
+        if (juegosjugados[2])
+        {
+            insigniagranada.SetActive(true);
+        }
+
     }
     public void Cadiz()
     {

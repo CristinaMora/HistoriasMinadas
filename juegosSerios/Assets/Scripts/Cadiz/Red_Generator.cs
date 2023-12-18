@@ -41,8 +41,8 @@ public class Red_Generator : MonoBehaviour
 
     void New_Red()
     {
-        int a = Random.Range(1, 5);
-        if(a == 1 || a==2 )
+        int a = Random.Range(1, 6);
+        if(a == 1 || a==2  )
         {
             float maxheight = transform.position.y + height1;
             float minheight = transform.position.y - height1;
@@ -55,7 +55,7 @@ public class Red_Generator : MonoBehaviour
             Instantiate(red2, new Vector3(transform.position.x, Random.Range(minheight, maxheight), 0), transform.rotation);
 
         }
-        else if(a == 4)
+        else if(a == 4 || a==5)
         {
             float maxheight = transform.position.y + height1;
             float minheight = transform.position.y - height1;

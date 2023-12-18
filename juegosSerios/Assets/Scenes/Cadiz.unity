@@ -375,7 +375,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104922801}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 96.3, y: 0, z: -10}
+  m_LocalPosition: {x: 94.6, y: 0, z: -10}
   m_LocalScale: {x: 1.9375, y: 11.691249, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -660,7 +660,8 @@ MonoBehaviour:
   pescadoraimage: {fileID: 693381731}
   fondoimage: {fileID: 1391360310}
   fondoimage2: {fileID: 774733650}
-  winmenu: {fileID: 0}
+  check: {fileID: 104922801}
+  winmenu: {fileID: 1839040040}
 --- !u!1 &416097236
 GameObject:
   m_ObjectHideFlags: 0
@@ -2208,7 +2209,7 @@ MonoBehaviour:
   red1: {fileID: 8018379969311882420, guid: 0a72356c32402214982a7545c1d54e26, type: 3}
   red2: {fileID: 6487735418974365, guid: 90cdc8fba0d2cd74fbf4c15ac0dbef13, type: 3}
   red3: {fileID: 5553140874907956273, guid: 0a9987ef2c8e5e7459bd73437502a58c, type: 3}
-  frecuency: 5
+  frecuency: 3
   height1: 5
   height2: 5
 --- !u!1 &1344401641

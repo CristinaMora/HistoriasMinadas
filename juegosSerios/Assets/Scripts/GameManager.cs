@@ -51,25 +51,10 @@ public class GameManager : MonoBehaviour
         if(name == "Granada")
         {
             StartCoroutine(FadeOut());
-            //sonidos[(int)current_music].Stop();
             save = music.rio_ancho;
-            //Debug.Log("workin");
-            // MostrarImagenActual();
             curr = states.granada;
         }
-        
-        //sonidos[(int)current_music].Play();
-
-        //GameObject[] objetosEncontrados = GameObject.FindGameObjectsWithTag("1");
-        //// Haz algo con los objetos encontrados (puedes iterar sobre el arreglo)
-        //int i = 0;
-        //foreach (GameObject objeto in objetosEncontrados)
-        //{
-        //    imagenes[i] = objeto;
-        //}
-        //Debug.Log(imagenes[0]);
-        //Debug.Log(imagenes[1]);
-        //MostrarImagenActual();
+ 
     }
     public void VuelveGranada()
     {
@@ -142,14 +127,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)&& curr==states.granada)  // Detecta un clic del botón izquierdo del mouse
-        {
-            //Debug.Log("netro");
-            //++a;
-            //imagenes[indiceActual].SetActive(false);
-            //imagenes[indiceActual].GetComponent<Image>().enabled = false;
-            //AvanzarImagen();
-        }
     }
     void AvanzarImagen()
     {
@@ -168,7 +145,6 @@ public class GameManager : MonoBehaviour
     {
         if (indiceActual < 2)
         {
-       
             imagenes[indiceActual].SetActive(true);
             imagenes[indiceActual].GetComponent<Image>().enabled = true;
         }
@@ -184,5 +160,6 @@ public class GameManager : MonoBehaviour
         g.SetActive(true);
 
     }
+
 
 }
