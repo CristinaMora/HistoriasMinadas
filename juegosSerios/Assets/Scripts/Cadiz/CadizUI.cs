@@ -23,6 +23,8 @@ public class CadizUI : MonoBehaviour
     [SerializeField] private GameObject dialogoobject;
     [SerializeField] private TMP_Text dialogotext;
     [SerializeField] private GameObject pescadoraimage;
+    [SerializeField] private GameObject fondoimage;
+    [SerializeField] private GameObject fondoimage2;
     private bool gameoverbool = false;
     private float timer = 0;
 
@@ -45,7 +47,9 @@ public class CadizUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        dialogoobject.SetActive(true);
         Play();
+
         //borderimage.SetActive(true);
         //paquitatext.SetActive(true);
         //almadrabatext.SetActive(true);
@@ -59,6 +63,8 @@ public class CadizUI : MonoBehaviour
         //barcoimage.SetActive(false);
         //dialogoobject.SetActive(false);
         //pescadoraimage.SetActive(false);
+        //fondoimage.SetActive(false);
+        //fondoimage2.SetActive(false);
     }
 
 
@@ -90,23 +96,34 @@ public class CadizUI : MonoBehaviour
         puertoimage.SetActive(true);
         dialogoobject.SetActive(true);
         pescadoraimage.SetActive(true);
+        
     }
     public void Play()
     {
-        //dialogo.SetActive(false);
+        Dialog.instance.desactivaCuadroDialogo();
         barcoimage.SetActive(false);
         fishplayer.SetActive(true);
         redgenerator.SetActive(true);
         pescadoraimage.SetActive(false);
+        fondoimage.SetActive(true);
+        fondoimage2.SetActive(true);
     }
     public void PlayAgain()
     {
+        Dialog.instance.desactivaCuadroDialogo();
+        pescadoraimage.SetActive(false);
         gameover.SetActive(false);
         playagainbutton.SetActive(false);
         fishplayer.SetActive(true);
         redgenerator.SetActive(true);
-        
+        fondoimage.SetActive(true);
+        fondoimage.GetComponent<Fondo_Movement>().start();
+        fondoimage2.SetActive(true);
+        fondoimage2.GetComponent<Fondo_Movement>().start();
+
+
     }
+
     public void dialogofunction()
     {
         int ndialog = Dialog.instance.numdialog;
@@ -115,10 +132,13 @@ public class CadizUI : MonoBehaviour
             barcoimage .SetActive(true);
             dialogotext.text = Dialog.instance.nextText();
         }
-        else if(ndialog == 15)
+        else if(ndialog == 14)
         {
-            Dialog.instance.desactivaCuadroDialogo();
             Play();
+        }
+        else if (ndialog == 17)
+        {
+            PlayAgain();
         }
         else
         {
@@ -131,5 +151,25 @@ public class CadizUI : MonoBehaviour
         redgenerator.SetActive(false);
         gameover.SetActive(true);
         gameoverbool = true;
+        fondoimage.SetActive(false);
+        fondoimage2.SetActive(false);
+    }
+    public void FirstCheckPoint()
+    {
+        pescadoraimage.SetActive(true);
+        redgenerator.SetActive(false);
+        fishplayer.SetActive(false);
+       
+        Dialog.instance.activaCuadroDialogo();
+        Dialog.instance.setnum(15);
+        fondoimage.GetComponent<Fondo_Movement>().stop();
+        fondoimage2.GetComponent<Fondo_Movement>().stop();
+
+
+
+    }
+    public void Win()
+    {
+        Debug.Log("jbbc");
     }
 }
