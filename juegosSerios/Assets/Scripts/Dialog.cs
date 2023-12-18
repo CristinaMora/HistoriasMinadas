@@ -12,8 +12,7 @@ public class Dialog : MonoBehaviour
     [SerializeField] GameObject textodialogo;
     [SerializeField] GameObject cuadrodialogo;
     [SerializeField] GameObject botondialogo;
-    [SerializeField]
-    LevelData _levelData;
+    [SerializeField] LevelData _levelData;
 
     TMP_Text _text = null;
 
