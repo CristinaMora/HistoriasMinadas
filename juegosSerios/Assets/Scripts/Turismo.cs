@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -20,20 +20,24 @@ public class Turismo : MonoBehaviour
         if (_titulo.text == "CORDOBA")
         {
             _explicacion.gameObject.SetActive(true);
-            _explicacion.text = "Es recomendable ir a principios de primavera \n o finales de otoño para tener las mejores temperaturas. \n si se visita en la segunda o tercera semana de mayo coincidira con \n el conscuros de los patios cordobeses";
+            _explicacion.text = "Es recomendable ir a principios de primavera \n o finales de otoÃ±o para tener las mejores temperaturas. \n si se visita en la segunda o tercera semana de mayo coincidira con \n el conscuros de los patios cordobeses";
 
         }
         else if(_titulo.text =="CADIZ")
         {
             _explicacion.gameObject.SetActive(true);
-            _explicacion.text = "La mejor época para visitar Cádiz suele ser durante la primavera (de marzo a junio) \n" +
-                " y el otoño (de septiembre a noviembre), cuando las temperaturas son suaves y agradables. \n" +
-                "Evita los meses más calurosos del verano, especialmente julio y agosto,\n" +
+            _explicacion.text = "La mejor Ã©poca para visitar CÃ¡diz suele ser durante la primavera (de marzo a junio) \n" +
+                " y el otoÃ±o (de septiembre a noviembre), cuando las temperaturas son suaves y agradables. \n" +
+                "Evita los meses mÃ¡s calurosos del verano, especialmente julio y agosto,\n" +
                 " si no toleras bien el calor intenso Es recomendable ir en primavera o verano \n " +
-                "o finales de otoño para tener las mejores temperaturas. \n ";
+                "o finales de otoÃ±o para tener las mejores temperaturas. \n ";
 
         }
-
+        else
+        {
+            _explicacion.gameObject.SetActive(true);
+            _explicacion.text = "Es recomendable ir en primavera o verano \n o finales de otoï¿½o para tener las mejores temperaturas. \n ";
+        }
     }
    
     public void cordobaTransporte()
@@ -46,10 +50,15 @@ public class Turismo : MonoBehaviour
         else if (_titulo.text == "CADIZ")
         {
             _explicacion.gameObject.SetActive(true);
-            _explicacion.text = "En Cádiz, puedes moverte fácilmente mediante autobuses urbanos,\n" +
-                " taxis, alquiler de bicicletas o a pie, especialmente en el compacto centro histórico.\n" +
-                " Para explorar áreas más remotas, considera el alquiler de coches, y aprovecha las conexiones \n" +
-                "marítimas para viajar por la costa.";
+            _explicacion.text = "En CÃ¡diz, puedes moverte fÃ¡cilmente mediante autobuses urbanos,\n" +
+                " taxis, alquiler de bicicletas o a pie, especialmente en el compacto centro histÃ³rico.\n" +
+                " Para explorar Ã¡reas mÃ¡s remotas, considera el alquiler de coches, y aprovecha las conexiones \n" +
+                "marÃ­timas para viajar por la costa.";
+        }
+        else
+        {
+            _explicacion.gameObject.SetActive(true);
+            _explicacion.text = "En Granada lo recomendable es ir andando a todos los sitios y disfrutar de sus edificios histï¿½ricos. Tambiï¿½n cuenta con transporte pï¿½blico, \npara asi hacer mï¿½s accesible su escarpado terreno a personas con discapacodad o mayores.";
         }
 
     }
@@ -63,11 +72,17 @@ public class Turismo : MonoBehaviour
         else if (_titulo.text == "CADIZ")
         {
             _explicacion.gameObject.SetActive(true);
-            _explicacion.text = "En Cádiz, disfruta del encanto de su centro histórico con la Catedral \n" +
+            _explicacion.text = "En CÃ¡diz, disfruta del encanto de su centro histÃ³rico con la Catedral \n" +
                 "y la Torre Tavira, explora las playas como La Victoria,\n" +
-                " y sumérgete en la rica historia naval en el Museo Naval \n" +
+                " y sumÃ©rgete en la rica historia naval en el Museo Naval \n" +
                 "y la base naval de la ciudad.";
         }
+        else
+        {
+            _explicacion.gameObject.SetActive(true);
+            _explicacion.text = "Alhambra \n Mirador San Nicolï¿½s \n Albaicï¿½n \n San Matï¿½as \n Famosa calle:  Pedro Antonio Alarcï¿½n \n Parque Lorca \n ";
+        }
+
 
     }
     public void cordobacuantoir()
@@ -81,11 +96,17 @@ public class Turismo : MonoBehaviour
         else if (_titulo.text == "CADIZ")
         {
             _explicacion.gameObject.SetActive(true);
-            _explicacion.text = "En Cádiz, disfruta del encanto de su centro histórico con la Catedral \n" +
+            _explicacion.text = "En CÃ¡diz, disfruta del encanto de su centro histÃ³rico con la Catedral \n" +
                 "y la Torre Tavira, explora las playas como La Victoria,\n" +
-                " y sumérgete en la rica historia naval en el Museo Naval \n" +
+                " y sumÃ©rgete en la rica historia naval en el Museo Naval \n" +
                 "y la base naval de la ciudad.";
          }
+        else
+        {
+            _explicacion.gameObject.SetActive(true);
+            _explicacion.text = "El mejor momento para disfrutar de la parva es \n la primera semana de agosto, que es cuendo se celebra";
+        }
+     
 
     }
     public void cordobadondecomer()
@@ -93,18 +114,22 @@ public class Turismo : MonoBehaviour
         if (_titulo.text == "CORDOBA")
         {
             _explicacion.gameObject.SetActive(true);
-            _explicacion.text = "Hay muchos sitios para ir a comer. Se caracteriza por las tapas. \n las tapas son pequeñas porciones de comida que viene con la bebida. \n Alguno de los mejores sitios para comer en cordoba son: \n Casa Pepe de la juderia \n El numero 10 \n Bar Santos \n Taberna bonfoé \n Casa del pisto";
+            _explicacion.text = "Hay muchos sitios para ir a comer. Se caracteriza por las tapas. \n las tapas son pequeÃ±as porciones de comida que viene con la bebida. \n Alguno de los mejores sitios para comer en cordoba son: \n Casa Pepe de la juderia \n El numero 10 \n Bar Santos \n Taberna bonfoÃ© \n Casa del pisto";
         }
         else if (_titulo.text == "CADIZ")
         {
             _explicacion.gameObject.SetActive(true);
-            _explicacion.text = "Cádiz, conocida por su rica tradición culinaria,\n" +
+            _explicacion.text = "CÃ¡diz, conocida por su rica tradiciÃ³n culinaria,\n" +
                 " ofrece delicias marinas en lugares como la Plaza de la Catedral \n" +
-                "y el Mercado Central, donde se pueden disfrutar de pescados frescos y platos típicos andaluces.\n" +
+                "y el Mercado Central, donde se pueden disfrutar de pescados frescos y platos tÃ­picos andaluces.\n" +
                 " Recomendaciones incluyen probar la cazuela de chocos o \n" +
-                "las tapas en la histórica Taberna El Tío de la Tiza";
+                "las tapas en la histÃ³rica Taberna El TÃ­o de la Tiza";
          }
-
+        else
+        {
+            _explicacion.gameObject.SetActive(true);
+            _explicacion.text = "Granada destaca por su comida, las tapas sobretodo. \n Lo mas sorprendente acaba siendo el precio. Una ubicaciï¿½n muy amable al bolsillo. \n En la mayorï¿½a de bares tienes una  bebida con tapa  por un mï¿½dico precio. \n";
+        }
     }
     public void cordobaclima()
     {
@@ -112,16 +137,21 @@ public class Turismo : MonoBehaviour
         if(_titulo.text == "CORDOBA")
         {
             _explicacion.gameObject.SetActive(true);
-            _explicacion.text = " Cordoba se distingue por su clima mediterráneo.\n Los veranos son muy calurosos, con temperaturas que suelen superar los 35C.\n Durante los inviernos el clima es más frio, con temperaturas entorno los 9-20C.\n En primavera y otoño, Córdoba tiene temperaturas moderadas, lo que es ideal para recorrer sus calles. ";
+            _explicacion.text = " Cordoba se distingue por su clima mediterrÃ¡neo.\n Los veranos son muy calurosos, con temperaturas que suelen superar los 35C.\n Durante los inviernos el clima es mÃ¡s frio, con temperaturas entorno los 9-20C.\n En primavera y otoÃ±o, CÃ³rdoba tiene temperaturas moderadas, lo que es ideal para recorrer sus calles. ";
         }
         else if (_titulo.text == "CADIZ")
         {
             _explicacion.gameObject.SetActive(true);
-            _explicacion.text = "Cádiz tiene un clima mediterráneo subtropical,\n" +
-                " caracterizado por inviernos suaves y veranos cálidos.\n" +
-                " Las temperaturas oscilan entre los 10°C en invierno y los 30°C en verano,\n" +
+            _explicacion.text = "CÃ¡diz tiene un clima mediterrÃ¡neo subtropical,\n" +
+                " caracterizado por inviernos suaves y veranos cÃ¡lidos.\n" +
+                " Las temperaturas oscilan entre los 10Â°C en invierno y los 30Â°C en verano,\n" +
                 " con brisas marinas refrescante";
-          }
+        }
+        else
+        {
+            _explicacion.gameObject.SetActive(true);
+            _explicacion.text = " Granada destaca por un clima seco, en invierno tiene temperaturas de hasta 0 grados y los veranos sueles ser demasiado agobiantes, \npor eso las mejores sueles ser primavera y otoÃ±o";
+        }
 
     }
     public void cordobaalojamiento()
@@ -134,11 +164,16 @@ public class Turismo : MonoBehaviour
         else if (_titulo.text == "CADIZ")
         {
             _explicacion.gameObject.SetActive(true);
-            _explicacion.text = "Cádiz ofrece diversas opciones de alojamiento, desde hoteles boutique en el casco antiguo\n" +
+            _explicacion.text = "CÃ¡diz ofrece diversas opciones de alojamiento, desde hoteles boutique en el casco antiguo\n" +
                 " hasta modernos apartamentos cerca de la playa.\n" +
                 "La ciudad cuenta con una amplia oferta para adaptarse \n" +
                 " a diferentes presupuestos y preferencias.";
-           }
+        }
+        else
+        {
+            _explicacion.gameObject.SetActive(true);
+            _explicacion.text = "Hay muchos sitios locales de alojamiento. \n Destaca: las  casas cueva en Guadix.";
+        }
     }
     public void cordobaMasinformacion()
     {
@@ -151,6 +186,11 @@ public class Turismo : MonoBehaviour
         {
             _explicacion.gameObject.SetActive(true);
             _explicacion.text = " para mas informacion consultar paginas: \n https://www.andalucia.org/es/provincia-cadiz \n https://turismo.cadiz.es/es/ver/todos";
+        }
+        else
+        {
+            _explicacion.gameObject.SetActive(true);
+            _explicacion.text = " para mas informacion consultar paginas: \n https://www.andalucia.org/es/provincia-granada \n https://www.granada.es/";
         }
      
     }

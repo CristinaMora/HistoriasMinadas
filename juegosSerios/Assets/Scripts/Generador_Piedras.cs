@@ -90,8 +90,9 @@ public class Generador_Piedras : MonoBehaviour
     }
     public void Volver()
     {
+        GameManager.instance.juegosjugados[2] = true;
         SceneManager.LoadScene("SampleScene");
-        GameManager.instance.VuelveGranada();
+      //  GameManager.instance.VuelveGranada();
     }
     public void FinalMinijuego()
     {
