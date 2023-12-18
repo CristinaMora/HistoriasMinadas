@@ -24,7 +24,9 @@ public class GameManager : MonoBehaviour
     private int indiceActual = 0;
     private enum states {menu, almeria,granada,malaga,jaen};
     states curr=states.menu;
-    public string DondeTurismo;
+     //                    cordoba, cadiz, granada
+    public bool[] juegosjugados ={ false, false,false};
+    public string DondeTurismo; //string para la escena de turismo
     private void Awake()
     {
         // Verifica si ya existe una instancia del GameManager.
@@ -41,10 +43,8 @@ public class GameManager : MonoBehaviour
         }
       
     }
-
     public void Start_Scene(string name)
     {
-
 
         SceneManager.LoadScene(name);
         if(name == "Granada")
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
             StartCoroutine(FadeOut());
             //sonidos[(int)current_music].Stop();
             save = music.rio_ancho;
-            Debug.Log("workin");
+            //Debug.Log("workin");
             // MostrarImagenActual();
             curr = states.granada;
         }

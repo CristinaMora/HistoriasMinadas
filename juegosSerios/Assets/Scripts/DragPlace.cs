@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.EventSystems;
 
 public class DragPlace : MonoBehaviour, IDropHandler
@@ -15,7 +16,11 @@ public class DragPlace : MonoBehaviour, IDropHandler
             items = Draghandler.itemDragging;
             items.transform.SetParent(transform);
             items.transform.position=transform.position;
-            if (items.gameObject.name == "Alfombra")
+            if (items.gameObject.name == "Alfombra" )
+            {
+
+            }
+            else if (items.gameObject.name == "gente")
             {
 
             }

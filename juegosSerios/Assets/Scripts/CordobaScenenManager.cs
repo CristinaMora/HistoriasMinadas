@@ -7,7 +7,7 @@ public class CordobaScenenManager : MonoBehaviour
 {
     //                         0      1        2       3       4        5        6      7      8      9
     //                      isabel, patios1,patios2,juderia,mezquita,jardines,estatua,viana, medina, bar
-   public bool[] monedas = { true , true   , true  , true  , true   , true   , true  ,true , true  , true};
+    public bool[] monedas = { true, true, true, true, true, true, true, true, true, true };
     public static CordobaScenenManager instance;
     #region references
     [SerializeField]
@@ -17,6 +17,11 @@ public class CordobaScenenManager : MonoBehaviour
     [SerializeField] public GameObject container;
     [SerializeField] public GameObject parent;
     [SerializeField] public GameObject moneda;
+    [SerializeField] public GameObject jarron;
+    [SerializeField] public GameObject jarronroto;
+    [SerializeField] public GameObject opcion1;
+    [SerializeField] public GameObject opcion2;
+    [SerializeField] public GameObject gente;
     int numMonedas;
     #endregion
     private void Awake()
@@ -50,7 +55,9 @@ public class CordobaScenenManager : MonoBehaviour
 
         //el texto 5
         Dialog.instance.activaCuadroDialogo();
-        CordobaUI.instance.actualizadialogo( Dialog.instance.specificText(8));
+        desactivaopciones();
+
+        CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(8));
         Dialog.instance.setnum(8);
         if (monedas[1])
         {
@@ -63,6 +70,8 @@ public class CordobaScenenManager : MonoBehaviour
     public void maceta2()
     {
         Dialog.instance.activaCuadroDialogo();
+        desactivaopciones();
+
         CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(6));
         Dialog.instance.setnum(6);
 
@@ -70,6 +79,8 @@ public class CordobaScenenManager : MonoBehaviour
     public void maceta3()
     {
         Dialog.instance.activaCuadroDialogo();
+        desactivaopciones();
+
         CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(7));
         Dialog.instance.setnum(7);
 
@@ -77,6 +88,8 @@ public class CordobaScenenManager : MonoBehaviour
     public void monedacelo()
     {
         Dialog.instance.activaCuadroDialogo();
+        desactivaopciones();
+
         CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(28));
         Dialog.instance.setnum(28);
         if (monedas[4])
@@ -90,6 +103,8 @@ public class CordobaScenenManager : MonoBehaviour
     public void monedadeestatua()
     {
         Dialog.instance.activaCuadroDialogo();
+        desactivaopciones();
+
         CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(40));
         Dialog.instance.setnum(40);
         regadera.SetActive(false);
@@ -104,6 +119,8 @@ public class CordobaScenenManager : MonoBehaviour
     public void jardines1()
     {
         Dialog.instance.activaCuadroDialogo();
+        desactivaopciones();
+
         CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(33));
         Dialog.instance.setnum(33);
 
@@ -111,6 +128,8 @@ public class CordobaScenenManager : MonoBehaviour
     public void jardines2()
     {
         Dialog.instance.activaCuadroDialogo();
+        desactivaopciones();
+
         CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(34));
         Dialog.instance.setnum(34);
 
@@ -118,6 +137,8 @@ public class CordobaScenenManager : MonoBehaviour
     public void jardines3()
     {
         Dialog.instance.activaCuadroDialogo();
+        desactivaopciones();
+
         CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(35));
         Dialog.instance.setnum(35);
 
@@ -125,6 +146,8 @@ public class CordobaScenenManager : MonoBehaviour
     public void jardines4()
     {
         Dialog.instance.activaCuadroDialogo();
+        desactivaopciones();
+
         CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(36));
         Dialog.instance.setnum(36);
         if (monedas[5])
@@ -135,7 +158,8 @@ public class CordobaScenenManager : MonoBehaviour
         }
 
     }
-    public void jardines4monedapalacio() { 
+    public void monedapalacio()
+    {
         if (monedas[7])
         {
             addMoneda();
@@ -153,6 +177,8 @@ public class CordobaScenenManager : MonoBehaviour
         if (monedas[2])
         {
             Dialog.instance.activaCuadroDialogo();
+            desactivaopciones();
+
             CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(9));
             Dialog.instance.setnum(9);
         }
@@ -164,6 +190,8 @@ public class CordobaScenenManager : MonoBehaviour
         if (monedas[0])
         {
             Dialog.instance.activaCuadroDialogo();
+            desactivaopciones();
+
             CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(0));
             Dialog.instance.setnum(0);
         }
@@ -173,14 +201,24 @@ public class CordobaScenenManager : MonoBehaviour
     }
     public void cambioescenaJuderia()
     {
+        jarron.SetActive(false);
+        jarronroto.SetActive(false);
         if (monedas[3])
         {
             Dialog.instance.activaCuadroDialogo();
+            desactivaopciones();
+
             CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(18));
             Dialog.instance.setnum(18);
+
         }
         else
-            Dialog.instance.desactivaCuadroDialogo();           
+        {
+            jarronroto.SetActive(true);
+            Dialog.instance.desactivaCuadroDialogo();
+
+
+        }
 
     }
     public void cambioescenaMezquita()
@@ -192,10 +230,10 @@ public class CordobaScenenManager : MonoBehaviour
             Dialog.instance.setnum(22);
         }
         else
-            Dialog.instance.desactivaCuadroDialogo();           
+            Dialog.instance.desactivaCuadroDialogo();
 
     }
-     
+
     public void cambioescenaJardines()
     {
         if (monedas[5])
@@ -213,8 +251,8 @@ public class CordobaScenenManager : MonoBehaviour
         if (monedas[6])
         {
             Dialog.instance.activaCuadroDialogo();
-            CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(37));
-            Dialog.instance.setnum(37);
+            CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(38));
+            Dialog.instance.setnum(38);
         }
         else
             Dialog.instance.desactivaCuadroDialogo();
@@ -232,7 +270,7 @@ public class CordobaScenenManager : MonoBehaviour
             Dialog.instance.setnum(41);
         }
         else
-        Dialog.instance.desactivaCuadroDialogo();
+            Dialog.instance.desactivaCuadroDialogo();
         imagen.SetActive(false);
         container.SetActive(false);
         parent.SetActive(false);
@@ -253,17 +291,55 @@ public class CordobaScenenManager : MonoBehaviour
     }
     public void cambioescenabar()
     { //falta poner si alguna de las monedas no ha sido recogida que no entre 
-        bool todas= true;
-        int i = 0;
-       
-        if (monedas[9])
+        bool todas = monedas[0] || monedas[1] || monedas[2] || monedas[3] || monedas[4] || monedas[5] || monedas[6] || monedas[7] || monedas[8];
+    
+        gente.SetActive(false);
+        if (todas)
         {
+            //58 
             Dialog.instance.activaCuadroDialogo();
-            CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(18));
-            Dialog.instance.setnum(18);
+            CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(57));
+            Dialog.instance.setnum(57);
         }
         else
-            Dialog.instance.desactivaCuadroDialogo();
+        {
+            //56no tengo hambre
+            Dialog.instance.activaCuadroDialogo();
+            CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(58));
+            Dialog.instance.setnum(58);
+        }
 
+    }
+    public void activaopciones()
+    {
+        opcion1.SetActive(true);
+        opcion2.SetActive(true);
+    }
+    public void desactivaopciones()
+    {
+        opcion1.SetActive(false);
+        opcion2.SetActive(false);
+    }
+    public void cambiajarrones()
+    {
+
+        jarron.SetActive(false);
+        jarronroto.SetActive(true);
+        Dialog.instance.activaCuadroDialogo();
+        CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(67));
+        Dialog.instance.setnum(67);
+        monedas[3] = false;
+        addMoneda();
+    }
+    public void monedabar()
+    {
+        if (monedas[9])
+        {
+            monedas[9] = false;
+            addMoneda();
+            Dialog.instance.activaCuadroDialogo();
+            CordobaUI.instance.actualizadialogo(Dialog.instance.specificText(71));
+            Dialog.instance.setnum(71);
+        }
     }
 }

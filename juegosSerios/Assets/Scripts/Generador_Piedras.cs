@@ -89,7 +89,7 @@ public class Generador_Piedras : MonoBehaviour
     public void Volver()
     {
         GameManager.instance.Start_Scene("SampleScene");
-        GameManager.instance.GranadeVisible();
+       // GameManager.instance.GranadeVisible();
     }
     public void FinalMinijuego()
     {
@@ -104,7 +104,7 @@ public class Generador_Piedras : MonoBehaviour
             // Desactivar objetos y gestionar el fundido si es necesario
             if (desactivarObjeto.GetComponent<ControladorFundido>() != null)
             {
-                desactivarObjeto.GetComponent<ControladorFundido>().ComenzarDesvanecer();
+                desactivarObjeto.GetComponent<ControladorFundido>().ComenzarFundido();
             }
             else
             {
@@ -117,7 +117,8 @@ public class Generador_Piedras : MonoBehaviour
             // Activar objetos y gestionar el fundido si es necesario
             if (desactivarObjeto.GetComponent<ControladorFundido>() != null)
             {
-                desactivarObjeto.GetComponent<ControladorFundido>().ComenzarFundido();
+                
+                desactivarObjeto.GetComponent<ControladorFundido>().ComenzarDesvanecer();
             }
             else
             {

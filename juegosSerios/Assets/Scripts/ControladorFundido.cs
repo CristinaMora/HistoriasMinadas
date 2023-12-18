@@ -10,7 +10,7 @@ public class ControladorFundido : MonoBehaviour
 
     private bool fundidoActivo = false;
     private float alpha = 0.0f;
-
+    bool apagade=false;
     void Start()
     {
         // Desactiva el panel al inicio (opcional, dependiendo de tu diseño)
@@ -46,20 +46,33 @@ public class ControladorFundido : MonoBehaviour
 
     public void ComenzarFundido()
     {
-        // Ajusta la transparencia al mínimo y activa el panel
-        alpha = 0.0f;
-        fundidoActivo = true;
+        if (!apagade)
+        {
+            apagade = true;
+            Debug.Log("fundir "+this.name);
+            // Ajusta la transparencia al mínimo y activa el panel
+            alpha = 0.0f;
+            fundidoActivo = true;
+        }
+    
     }
 
     public void ComenzarDesvanecer()
     {
-        // Ajusta la transparencia al máximo y activa el panel
-        alpha = 1.0f;
-        fundidoActivo = true;
+        if (!apagade)
+        {
+            apagade = true;
+            Debug.Log("desvanecer "+this.name);
+            // Ajusta la transparencia al máximo y activa el panel
+            alpha = 1.0f;
+            fundidoActivo = true;
+        }
+       
     }
 
     void MostrarSiguienteBoton()
     {
+       
         // Desactiva el panel y muestra el siguiente botón
         if (panelNegroImage != null)
         {
