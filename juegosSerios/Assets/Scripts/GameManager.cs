@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
             StartCoroutine(FadeOut());
             //sonidos[(int)current_music].Stop();
             save = music.rio_ancho;
-            Debug.Log("workin");
+            //Debug.Log("workin");
             // MostrarImagenActual();
             curr = states.granada;
         }
