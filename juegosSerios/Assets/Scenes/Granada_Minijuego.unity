@@ -166,8 +166,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 410.14066, y: -208.2359}
-  m_SizeDelta: {x: 1910.8293, y: 1062.1885}
+  m_AnchoredPosition: {x: 413.60532, y: -204.77106}
+  m_SizeDelta: {x: 1931.6182, y: 1096.8369}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &30453314
 MonoBehaviour:
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   botones: []
-  panelNegroImage: {fileID: 0}
+  panelNegroImage: {fileID: 30453314}
   panelNegroSpriteRenderer: {fileID: 0}
   velocidadFundido: 3
 --- !u!1818360610 &30453317
@@ -1165,7 +1165,7 @@ MonoBehaviour:
   botones: []
   panelNegroImage: {fileID: 0}
   panelNegroSpriteRenderer: {fileID: 1102668946}
-  velocidadFundido: 2
+  velocidadFundido: 3
 --- !u!1 &1375513301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1207,6 +1207,10 @@ MonoBehaviour:
   - {fileID: 1102668945}
   - {fileID: 1967149432}
   - {fileID: 2067498681}
+  - {fileID: 478566977}
+  - {fileID: 22899407}
+  - {fileID: 478566977}
+  - {fileID: 1967149432}
   aparecer:
   - {fileID: 512027978}
   - {fileID: 30453312}
@@ -1238,7 +1242,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2dee7d6ff8a5e974a956a0f5877ae09e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.249
   m_Pitch: 1
   Loop: 0
   Mute: 0

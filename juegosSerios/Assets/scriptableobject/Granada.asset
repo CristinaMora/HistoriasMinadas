@@ -15,32 +15,34 @@ MonoBehaviour:
   texto:
   - Hola Nati
   - "Espero que estes lista para la parva, va ser un d\xEDa duro"
-  - "Cuando estes lista, pulsa sobre la paja de detr\xE1s"
-  - para comenzaar a trillar la paja.
+  - "Cuando estes lista, pulsa sobre la paja de detr\xE1s "
+  - "y comenzar\xE1 tu tarea de trillar la paja, pero ,ten cuidado hay muchas pierdras
+    en el camino"
   - "Yo, si fuera t\xFA, primero dar\xEDa una vuelta."
   - Puedes preguntar a a la gente haciendo click
-  - sobre ellos
+  - sobre ellos.
   - "!Seguro te cuentan algo interesante\xA1"
   - Me encanta la parva.
-  - 'Consiste el como se pbtiene el grano de '
+  - 'Consiste en como se obtiene el grano de '
   - la paja para luego poder hacer harina
   - "!Es todo un proceso\xA1"
-  - 'Primero, como ves se pone '
-  - en un ruedo circular
-  - Para luego trillarla con el cabalo
+  - 'Primero, como ves,  se pone '
+  - en un ruedo circular.
+  - Para luego trillarla con el cabalo. Tiene detras un trillo que separa la paja
+    del grano
   - Una vez trillada
   - "Se puede o lanzar en la direcci\xF3n "
-  - opuesta al viento
-  - "y as\xED el grano cae y la paja se va volando"
-  - "f\xEDsica supongo"
-  - "O tambi\xE9n si eres m\xE1s moderno hay una m\xE1quina que lo hace"
-  - "Las vistas desde aqu\xED con inceibles adem\xE1s"
+  - opuesta al viento,
+  - "y as\xED el grano cae y la paja se va volando."
+  - "f\xEDsica supongo."
+  - "O, tambi\xE9n si eres m\xE1s moderno, hay una m\xE1quina que lo hace"
+  - "Las vistas desde aqu\xED son inceiincreibles bles adem\xE1s"
   - "\xBFQu\xE9 tal Nati?"
   - Me encanta estar en la Alpujarra
   - "La arquitectura local es \xFAnica,"
   - ' con casas en terrazas que se adaptan al terreno'
   - " monta\xF1oso. Los tejados planos y las chimeneas "
-  - "a\xF1aden car\xE1cter"
+  - "a\xF1aden car\xE1cter."
   - Es un destino perfecto para el turismo rural
   - 'donde el tiempo parece ralentizarse, '
   - "permiti\xE9ndome disfrutar de la autenticidad"

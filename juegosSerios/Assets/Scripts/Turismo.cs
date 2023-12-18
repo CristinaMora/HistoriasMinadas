@@ -41,7 +41,7 @@ public class Turismo : MonoBehaviour
         else
         {
             _explicacion.gameObject.SetActive(true);
-            _explicacion.text = "En Granada lo recomendable es ir andando a todos los sitios y disfrutar de sus edificios históricos.";
+            _explicacion.text = "En Granada lo recomendable es ir andando a todos los sitios y disfrutar de sus edificios históricos. También cuenta con transporte público, \npara asi hacer más accesible su escarpado terreno a personas con discapacodad o mayores.";
         }
        
     }
@@ -55,7 +55,7 @@ public class Turismo : MonoBehaviour
         else
         {
             _explicacion.gameObject.SetActive(true);
-            _explicacion.text = "Alhambra \n Mirador San Nicolás \n Albaicín \n San Matías \n Famosa calle: \n Pedro Antonio Alarcón \n Parque Lorca \n ";
+            _explicacion.text = "Alhambra \n Mirador San Nicolás \n Albaicín \n San Matías \n Famosa calle:  Pedro Antonio Alarcón \n Parque Lorca \n ";
         }
         
     }
@@ -70,7 +70,7 @@ public class Turismo : MonoBehaviour
         else
         {
             _explicacion.gameObject.SetActive(true);
-            _explicacion.text = "El mejor momento para disfrutar de la parva es en la parva es \n la primera semana de agosto.";
+            _explicacion.text = "El mejor momento para disfrutar de la parva es \n la primera semana de agosto, que es cuendo se celebra";
         }
        
     }
@@ -84,7 +84,7 @@ public class Turismo : MonoBehaviour
         else
         {
             _explicacion.gameObject.SetActive(true);
-            _explicacion.text = "Granaad destaca por su comida, las tapas sobretodo. \n Lo mas destacable acaba diendo el precio siendo una ubicación muy amable al bolsillo. \n En la mayoría de bares bebida con tapa no suele ser demasiado caro. \n";
+            _explicacion.text = "Granada destaca por su comida, las tapas sobretodo. \n Lo mas sorprendente acaba siendo el precio. Una ubicación muy amable al bolsillo. \n En la mayoría de bares tienes una  bebida con tapa  por un módico precio. \n";
         }
 
     }
@@ -112,7 +112,7 @@ public class Turismo : MonoBehaviour
         else
         {
             _explicacion.gameObject.SetActive(true);
-            _explicacion.text = "Hay muchos sitios locales de alojamiento \n hay sitios destacables como casas cueva en Guadix.";
+            _explicacion.text = "Hay muchos sitios locales de alojamiento. \n Destaca: las  casas cueva en Guadix.";
         }
       
     }
