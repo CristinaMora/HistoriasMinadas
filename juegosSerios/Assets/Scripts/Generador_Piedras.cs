@@ -1,6 +1,8 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class Generador_Piedras : MonoBehaviour
 {
     public static Generador_Piedras instance;
@@ -88,8 +90,8 @@ public class Generador_Piedras : MonoBehaviour
     }
     public void Volver()
     {
-        GameManager.instance.Start_Scene("SampleScene");
-       // GameManager.instance.GranadeVisible();
+        SceneManager.LoadScene("SampleScene");
+        GameManager.instance.VuelveGranada();
     }
     public void FinalMinijuego()
     {

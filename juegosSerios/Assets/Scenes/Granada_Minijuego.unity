@@ -166,8 +166,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 413.60532, y: -204.77106}
-  m_SizeDelta: {x: 1931.6182, y: 1096.8369}
+  m_AnchoredPosition: {x: 406.58682, y: -206.5257}
+  m_SizeDelta: {x: 1945.6553, y: 1170.5317}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &30453314
 MonoBehaviour:
@@ -590,7 +590,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1375513302}
         m_TargetAssemblyTypeName: Generador_Piedras, Assembly-CSharp
-        m_MethodName: FinalMinijuego
+        m_MethodName: Volver
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1102,7 +1102,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102668945}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1198.6, y: -470.4, z: 2.993205}
+  m_LocalPosition: {x: -1198.6, y: -470.64, z: 2.993205}
   m_LocalScale: {x: 1.6563592, y: 1.9689, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 5
   rangoMovimientoX: 16
-  amplitudY: 0.02
+  amplitudY: 0.016
 --- !u!61 &1102668949
 BoxCollider2D:
   m_ObjectHideFlags: 0
