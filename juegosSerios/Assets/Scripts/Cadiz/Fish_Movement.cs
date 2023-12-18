@@ -7,7 +7,7 @@ public class Fish_Movement : MonoBehaviour
     public Rigidbody2D _myrigidbody;
     public Transform _mytransform;
     public float speedjump;
-    [SerializeField] private GameObject tartar;
+    [SerializeField] private GameObject gameover;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +24,7 @@ public class Fish_Movement : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D c)
     {
-        tartar.SetActive(true);
+        
+        CadizUI.instance.GameOver();
     }
 }
