@@ -7,6 +7,7 @@ public class Fish_Movement : MonoBehaviour
     public Rigidbody2D _myrigidbody;
     public Transform _mytransform;
     public float speedjump;
+    [SerializeField] private GameObject tartar;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,5 +21,9 @@ public class Fish_Movement : MonoBehaviour
         {
             _myrigidbody.velocity = Vector2.up * speedjump ;
         }
+    }
+    private void OnCollisionEnter2D(Collision2D c)
+    {
+        tartar.SetActive(true);
     }
 }

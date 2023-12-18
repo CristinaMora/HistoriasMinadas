@@ -13,7 +13,11 @@ public class CadizUI : MonoBehaviour
     [SerializeField] private GameObject almadraba;
     [SerializeField] private GameObject button;
     [SerializeField] private GameObject explicacion;
-   
+    [SerializeField] private GameObject fish;
+    [SerializeField] private GameObject generator;
+    [SerializeField] private GameObject tartarimage;
+    [SerializeField] private GameObject dialogo;
+    [SerializeField] private GameObject pescadora;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +27,11 @@ public class CadizUI : MonoBehaviour
         almadraba.SetActive(true);
         explicacion.SetActive(true);
         border.SetActive(true);
+        fish.SetActive(false);
+        generator.SetActive(false);
+        tartarimage.SetActive(false);
+        dialogo.SetActive(false);
+        pescadora.SetActive(false);
 
     }
 
@@ -33,13 +42,21 @@ public class CadizUI : MonoBehaviour
 
     }
 
-    public void PlayButton()
+     public void PlayButton()
     {
         cadiz.SetActive(false);
         button.SetActive(false);
         almadraba.SetActive(false);
         border.SetActive(false);
-        explicacion?.SetActive(false);
-       
+        explicacion.SetActive(false);
+        dialogo.SetActive(true);
+        pescadora.SetActive(true);
+    }
+    public void Play()
+    {
+        dialogo.SetActive(false);
+        fish.SetActive(true);
+        generator.SetActive(true);
+        pescadora.SetActive(false);
     }
 }

@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e186e580cd766d479c4c0ab5ad040ff, type: 3}
   m_Name: Cadiz
   m_EditorClassIdentifier: 
-  texto: []
+  texto:
+  - Hola! Yo soy Paquita
+  - "Una humilde pescadora de Barbate, en la maravillosa provincia de C\xE1diz!"
+  - Hoy has venido para experimentar los que es la Almadraba verdad?
+  - Pues vamos a ello!
+  - 
