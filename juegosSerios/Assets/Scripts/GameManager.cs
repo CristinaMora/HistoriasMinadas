@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
 
         while (timer < duracionFadeOut)
         {
-            Debug.Log(timer);
+           // Debug.Log(timer);
             timer += Time.deltaTime;
             sonidos[(int)current_music].volume = Mathf.Lerp(startVolume, 0, timer / duracionFadeOut);
             yield return null;
@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
         else
         {
             // La secuencia de imágenes ha llegado al final
-            Debug.Log("Secuencia de imágenes completada.");
+          //  Debug.Log("Secuencia de imágenes completada.");
         }
     }
     void MostrarImagenActual()
