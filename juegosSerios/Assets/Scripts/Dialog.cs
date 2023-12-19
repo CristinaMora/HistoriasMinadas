@@ -24,7 +24,7 @@ public class Dialog : MonoBehaviour
         {
             // Si no existe, establece esta instancia como la instancia única.
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
         else
         {

@@ -39,7 +39,7 @@ public class CadizUI : MonoBehaviour
         {
             // Si no existe, establece esta instancia como la instancia única.
             instance = this;
-            DontDestroyOnLoad(gameObject);
+           // DontDestroyOnLoad(gameObject);
         }
         else
         {

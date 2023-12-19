@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
     public void VuelveGranada()
     {
         GameObject canvas = GameObject.Find("UI");
-        Debug.Log(canvas);
+      //  Debug.Log(canvas);
         uiManager = canvas.GetComponent<UIManager>();
         uiManager.reinicio();
         juegosjugados[0] = true;
