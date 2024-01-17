@@ -592,19 +592,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 146564032}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473702936}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: Huelva
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &146564035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1039,19 +1027,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 235475983}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473702936}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: Malaga
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &235475986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1685,19 +1661,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 757095324}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473702936}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: Sevilla
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &757095327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2451,19 +2415,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1171058133}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473702936}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: Jaen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1171058136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3138,19 +3090,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1982422121}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473702936}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: Almeria
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1982422124
 MonoBehaviour:
   m_ObjectHideFlags: 0
