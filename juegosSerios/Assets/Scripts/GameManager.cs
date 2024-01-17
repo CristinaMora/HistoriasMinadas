@@ -46,7 +46,10 @@ public class GameManager : MonoBehaviour
     }
     public void Start_Scene(string name)
     {
-
+        if(name == "Cordoba")
+        {
+            sonidos[(int)current_music].Stop();
+        }
         SceneManager.LoadScene(name);
         if(name == "Granada")
         {

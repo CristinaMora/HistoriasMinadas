@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Turismo : MonoBehaviour
 {
@@ -14,7 +15,10 @@ public class Turismo : MonoBehaviour
         _explicacion.gameObject.SetActive(false);   
         _titulo.text = GameManager.instance.DondeTurismo;
     }
-
+    public void vueltaa()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
    public void cordobaCuandoIr()
     {
         if (_titulo.text == "CORDOBA")

@@ -11087,6 +11087,7 @@ MonoBehaviour:
   opcion1: {fileID: 2007398891}
   opcion2: {fileID: 1519452997}
   gente: {fileID: 845269217}
+  sonidito: {fileID: 8300000, guid: 9074dcba1bfe57343b2a66fb9c215552, type: 3}
 --- !u!4 &1836290709
 Transform:
   m_ObjectHideFlags: 0

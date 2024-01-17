@@ -22,6 +22,9 @@ public class CordobaScenenManager : MonoBehaviour
     [SerializeField] public GameObject opcion1;
     [SerializeField] public GameObject opcion2;
     [SerializeField] public GameObject gente;
+    [SerializeField]
+    private AudioClip sonidito; // Sonido del caballo
+    private AudioSource audioSource;
     int numMonedas;
     #endregion
     private void Awake()
@@ -38,6 +41,15 @@ public class CordobaScenenManager : MonoBehaviour
             // Si ya existe una instancia, destruye esta para evitar duplicados.
             Destroy(gameObject);
         }
+        // Obtén o agrega un componente AudioSource
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+        audioSource.clip = sonidito;
+        audioSource.loop = true;
+        audioSource.Play();
 
     }
     private void Start()
